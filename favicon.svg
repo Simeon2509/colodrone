@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="5" fill="#1B4FD8"/>
+  <!-- Arms -->
+  <line x1="13" y1="13" x2="7" y2="7" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="19" y1="13" x2="25" y2="7" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="13" y1="19" x2="7" y2="25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="19" y1="19" x2="25" y2="25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Center body -->
+  <rect x="11" y="11" width="10" height="10" rx="2" fill="white"/>
+  <!-- Rotors -->
+  <circle cx="6" cy="6" r="4" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="26" cy="6" r="4" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="6" cy="26" r="4" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="26" cy="26" r="4" fill="none" stroke="white" stroke-width="2"/>
+</svg>
