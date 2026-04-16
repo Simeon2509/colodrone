@@ -37,18 +37,23 @@ export default function RealEstatePage() {
               </ul>
             </div>
             <div>
-              <div className="section-eyebrow"><div className="eyebrow-line"></div>Formats</div>
+              <div className="section-eyebrow"><div className="eyebrow-line"></div>Sample Footage</div>
               <h2 className="section-title">Shot in 4K HDR</h2>
-              <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: '1.7' }}>Flown on the DJI Mini 3 with Dual Native ISO Fusion — crisp detail in highlights and shadows, day or night. Every shoot is delivered in both landscape and portrait so you have content for every platform.</p>
-              <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <div style={{ background: 'var(--co-blue-light)', border: '0.5px solid rgba(27,79,216,0.2)', padding: '1rem 1.2rem', borderRadius: '3px' }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", letterSpacing: '2px', color: 'var(--co-blue)', marginBottom: '0.3rem' }}>Horizontal 16:9</div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>MLS listings, Zillow, websites, email marketing</div>
-                </div>
-                <div style={{ background: 'var(--co-blue-light)', border: '0.5px solid rgba(27,79,216,0.2)', padding: '1rem 1.2rem', borderRadius: '3px' }}>
-                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", letterSpacing: '2px', color: 'var(--co-blue)', marginBottom: '0.3rem' }}>Vertical 9:16</div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>Instagram Reels, TikTok, Facebook Stories</div>
-                </div>
+              <div className="sp-video-wrap">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  src="/re_bg.mp4"
+                  className="sp-video"
+                />
+                <div className="sp-video-badge">4K HDR · DJI Mini 3</div>
+              </div>
+              <div style={{ marginTop: '1rem', display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
+                <div style={{ background: 'var(--co-blue-light)', border: '0.5px solid rgba(27,79,216,0.2)', padding: '0.5rem 0.9rem', borderRadius: '3px', fontSize: '0.75rem', color: 'var(--co-blue)', letterSpacing: '1px' }}>16:9 Horizontal</div>
+                <div style={{ background: 'var(--co-blue-light)', border: '0.5px solid rgba(27,79,216,0.2)', padding: '0.5rem 0.9rem', borderRadius: '3px', fontSize: '0.75rem', color: 'var(--co-blue)', letterSpacing: '1px' }}>9:16 Vertical Reels</div>
+                <div style={{ background: 'var(--co-blue-light)', border: '0.5px solid rgba(27,79,216,0.2)', padding: '0.5rem 0.9rem', borderRadius: '3px', fontSize: '0.75rem', color: 'var(--co-blue)', letterSpacing: '1px' }}>Dual Native ISO</div>
               </div>
             </div>
           </div>

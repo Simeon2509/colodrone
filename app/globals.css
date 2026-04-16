@@ -328,6 +328,22 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 }
 .sp-type-item strong{display:block;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;color:var(--text);font-size:1rem;margin-bottom:0.3rem}
 
+/* SERVICE PAGE INLINE VIDEO */
+.sp-video-wrap{
+  position:relative;margin-top:1.5rem;border-radius:4px;overflow:hidden;
+  border:0.5px solid var(--border2);background:#0a0e1a;
+  aspect-ratio:16/9;
+}
+.sp-video{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.sp-video-badge{
+  position:absolute;bottom:0.75rem;left:0.75rem;
+  background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);
+  color:rgba(255,255,255,0.85);font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 10px;border-radius:2px;border:0.5px solid rgba(255,255,255,0.15);
+}
+
 /* IMAGE GALLERY */
 .sp-gallery{padding:5rem 2.5rem;background:var(--bg)}
 .sp-gallery-inner{max-width:960px;margin:0 auto}
