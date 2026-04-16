@@ -15,7 +15,7 @@ export default function ConstructionPage() {
         <p className="sp-hero-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports that are faster and safer than traditional methods.</p>
         <div className="sp-hero-btns">
           <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/#services" className="btn-outline">All Services</Link>
+          <Link href="/services" className="btn-outline">All Services</Link>
         </div>
       </section>
 

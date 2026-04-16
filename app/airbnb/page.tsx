@@ -15,7 +15,7 @@ export default function AirbnbPage() {
         <p className="sp-hero-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</p>
         <div className="sp-hero-btns">
           <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/#services" className="btn-outline">All Services</Link>
+          <Link href="/services" className="btn-outline">All Services</Link>
         </div>
       </section>
 

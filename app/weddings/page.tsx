@@ -15,7 +15,7 @@ export default function WeddingsPage() {
         <p className="sp-hero-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and private events across Colorado.</p>
         <div className="sp-hero-btns">
           <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/#services" className="btn-outline">All Services</Link>
+          <Link href="/services" className="btn-outline">All Services</Link>
         </div>
       </section>
 

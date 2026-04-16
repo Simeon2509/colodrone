@@ -21,7 +21,7 @@ export default function Home() {
         <p className="hero-subtitle-line">Colorado&apos;s Own Drone Photography &amp; Videography Service</p>
         <p className="hero-headline"><strong>Professionally flown. Beautifully shot.</strong> 4K HDR aerial photography and videography — delivered in both vertical and horizontal formats — serving Denver and all of Colorado.</p>
         <div className="hero-btns">
-          <a href="#services" className="btn-primary">Explore Services</a>
+          <Link href="/services" className="btn-primary">Explore Services</Link>
           <a href="#contact" className="btn-outline">Get a Free Quote</a>
         </div>
         <div className="trust-bar">

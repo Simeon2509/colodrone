@@ -15,7 +15,7 @@ export default function VenuesPage() {
         <p className="sp-hero-desc">Give future guests and visitors a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can.</p>
         <div className="sp-hero-btns">
           <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/#services" className="btn-outline">All Services</Link>
+          <Link href="/services" className="btn-outline">All Services</Link>
         </div>
       </section>
 

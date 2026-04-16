@@ -18,7 +18,7 @@ export default function RealEstatePage() {
           <p className="sp-hero-desc">From a downtown Denver studio to a 10-acre mountain estate — stunning aerial content that makes every listing sell and rent faster.</p>
           <div className="sp-hero-btns">
             <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-            <Link href="/#services" className="btn-outline">All Services</Link>
+            <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
       </section>
