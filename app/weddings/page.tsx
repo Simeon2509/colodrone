@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Wedding & Event Drone Photography — ColoDrone',
@@ -9,13 +10,17 @@ export const metadata: Metadata = {
 export default function WeddingsPage() {
   return (
     <>
-      <section className="sp-hero">
-        <div className="sp-hero-label">Service 02</div>
-        <h1 className="sp-hero-title">Weddings &amp; Events</h1>
-        <p className="sp-hero-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and private events across Colorado.</p>
-        <div className="sp-hero-btns">
-          <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/services" className="btn-outline">All Services</Link>
+      <section className="sp-hero sp-hero-video">
+        <video className="sp-hero-vid" autoPlay muted loop playsInline src="/weddings_bg.mp4" />
+        <div className="sp-hero-overlay" />
+        <div className="sp-hero-content">
+          <div className="sp-hero-label">Service 02</div>
+          <h1 className="sp-hero-title">Weddings &amp; Events</h1>
+          <p className="sp-hero-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and private events across Colorado.</p>
+          <div className="sp-hero-btns">
+            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/services" className="btn-outline">All Services</Link>
+          </div>
         </div>
       </section>
 
@@ -50,15 +55,16 @@ export default function WeddingsPage() {
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
           <h2 className="section-title">Weddings &amp; Events</h2>
-          <div className="sp-gallery-grid">
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Mountain Ceremony</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Vertical Reel</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Venue Reveal</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Guest Arrival</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Landscape</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Couple Portrait</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Reception</span></div>
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Rocky Mountain Backdrop</span></div>
+          <div className="re-photo-grid">
+            <div className="re-photo re-photo-wide">
+              <Image src="/images/weddings/p1.jpg" alt="Aerial drone shot of Colorado wedding ceremony" fill sizes="(max-width:768px) 100vw, 66vw" style={{ objectFit: 'cover' }} priority />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/weddings/p2.jpg" alt="Mountain wedding aerial photography Colorado" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/weddings/p3.jpg" alt="Wide aerial view of outdoor wedding venue in Colorado" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
       </section>

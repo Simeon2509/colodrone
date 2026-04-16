@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Airbnb & Short-Term Rental Drone Photography — ColoDrone',
@@ -9,13 +10,17 @@ export const metadata: Metadata = {
 export default function AirbnbPage() {
   return (
     <>
-      <section className="sp-hero">
-        <div className="sp-hero-label">Service 04</div>
-        <h1 className="sp-hero-title">Airbnb &amp; Short-Term Rentals</h1>
-        <p className="sp-hero-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</p>
-        <div className="sp-hero-btns">
-          <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/services" className="btn-outline">All Services</Link>
+      <section className="sp-hero sp-hero-video">
+        <video className="sp-hero-vid" autoPlay muted loop playsInline src="/airbnb_bg.mp4" />
+        <div className="sp-hero-overlay" />
+        <div className="sp-hero-content">
+          <div className="sp-hero-label">Service 04</div>
+          <h1 className="sp-hero-title">Airbnb &amp; Short-Term Rentals</h1>
+          <p className="sp-hero-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</p>
+          <div className="sp-hero-btns">
+            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/services" className="btn-outline">All Services</Link>
+          </div>
         </div>
       </section>
 
@@ -49,15 +54,16 @@ export default function AirbnbPage() {
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
           <h2 className="section-title">Airbnb &amp; Rental Shots</h2>
-          <div className="sp-gallery-grid">
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Property Hero Shot</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Instagram Reel</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Neighborhood</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Rooftop / Deck</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Street Approach</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>TikTok Reel</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Mountain Cabin</span></div>
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Denver Skyline Context</span></div>
+          <div className="re-photo-grid">
+            <div className="re-photo re-photo-wide">
+              <Image src="/images/airbnb/p1.jpg" alt="Aerial drone shot of Colorado Airbnb rental property" fill sizes="(max-width:768px) 100vw, 66vw" style={{ objectFit: 'cover' }} priority />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/airbnb/p2.jpg" alt="Drone photography of short-term rental in Colorado" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/airbnb/p3.jpg" alt="Wide aerial view of vacation rental property Colorado" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
       </section>

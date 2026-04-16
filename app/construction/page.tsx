@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Construction & Inspection Drone Services — ColoDrone',
@@ -9,13 +10,17 @@ export const metadata: Metadata = {
 export default function ConstructionPage() {
   return (
     <>
-      <section className="sp-hero">
-        <div className="sp-hero-label">Service 03</div>
-        <h1 className="sp-hero-title">Construction &amp; Inspection</h1>
-        <p className="sp-hero-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports that are faster and safer than traditional methods.</p>
-        <div className="sp-hero-btns">
-          <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
-          <Link href="/services" className="btn-outline">All Services</Link>
+      <section className="sp-hero sp-hero-video">
+        <video className="sp-hero-vid" autoPlay muted loop playsInline src="/construction_bg.mp4" />
+        <div className="sp-hero-overlay" />
+        <div className="sp-hero-content">
+          <div className="sp-hero-label">Service 03</div>
+          <h1 className="sp-hero-title">Construction &amp; Inspection</h1>
+          <p className="sp-hero-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports that are faster and safer than traditional methods.</p>
+          <div className="sp-hero-btns">
+            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/services" className="btn-outline">All Services</Link>
+          </div>
         </div>
       </section>
 
@@ -54,15 +59,16 @@ export default function ConstructionPage() {
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
           <h2 className="section-title">Construction &amp; Inspection Shots</h2>
-          <div className="sp-gallery-grid">
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Site Overview</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Progress Update</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Foundation Stage</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Framing Stage</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Roof Inspection</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Hail Damage</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Completed Build</span></div>
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Before &amp; After</span></div>
+          <div className="re-photo-grid">
+            <div className="re-photo re-photo-wide">
+              <Image src="/images/construction/p1.jpg" alt="Aerial drone shot of Colorado construction site" fill sizes="(max-width:768px) 100vw, 66vw" style={{ objectFit: 'cover' }} priority />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/construction/p2.jpg" alt="Close-up aerial inspection drone photography" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
+            <div className="re-photo">
+              <Image src="/images/construction/p3.jpg" alt="Wide aerial view of Colorado construction project" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
       </section>

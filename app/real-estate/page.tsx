@@ -60,39 +60,19 @@ export default function RealEstatePage() {
         </div>
       </section>
 
-      {/* Photo gallery — 3 real aerial shots */}
       <section className="sp-gallery">
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
           <h2 className="section-title">Real Estate Shots</h2>
           <div className="re-photo-grid">
             <div className="re-photo re-photo-wide">
-              <Image
-                src="/images/real-estate/re-1.jpg"
-                alt="Aerial drone shot of Colorado real estate property"
-                fill
-                sizes="(max-width:768px) 100vw, 66vw"
-                style={{ objectFit: 'cover' }}
-                priority
-              />
+              <Image src="/images/real-estate/p1.jpg" alt="Aerial drone shot of Colorado real estate property" fill sizes="(max-width:768px) 100vw, 66vw" style={{ objectFit: 'cover' }} priority />
             </div>
             <div className="re-photo">
-              <Image
-                src="/images/real-estate/re-2.jpg"
-                alt="Aerial drone photography of residential property in Colorado"
-                fill
-                sizes="(max-width:768px) 100vw, 33vw"
-                style={{ objectFit: 'cover' }}
-              />
+              <Image src="/images/real-estate/p2.jpg" alt="Aerial drone photography of residential property in Colorado" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
             </div>
             <div className="re-photo">
-              <Image
-                src="/images/real-estate/re-3.jpg"
-                alt="Wide aerial view of Colorado property from drone"
-                fill
-                sizes="(max-width:768px) 100vw, 33vw"
-                style={{ objectFit: 'cover' }}
-              />
+              <Image src="/images/real-estate/p3.jpg" alt="Wide aerial view of Colorado property from drone" fill sizes="(max-width:768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </div>
