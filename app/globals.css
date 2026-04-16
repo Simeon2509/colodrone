@@ -280,22 +280,22 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 
 /* SCROLL DRONE */
 .scroll-drone-wrap{
-  height:160vh;
+  /* scrollable distance = this - 100vh → 50vh to drive the animation */
+  height:150vh;
   position:relative;
 }
 .scroll-drone-sticky{
   position:sticky;
-  top:0;
-  height:100vh;
+  /* vertically centre a ~330px tall canvas in the viewport */
+  top:calc(50vh - 175px);
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
-  /* No background — canvas is transparent so page bg shows through */
+  /* height is only as tall as the canvas — no empty space above/below */
+  padding:1.5rem 0;
 }
 .scroll-drone-canvas{
-  /* aspect-ratio matches the 960×760 source video */
-  width:min(420px, 58vw);
+  width:min(400px, 55vw);
   aspect-ratio:960/760;
   display:block;
 }
