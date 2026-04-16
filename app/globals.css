@@ -451,6 +451,8 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 .svc-hero-desc{
   font-size:0.95rem;color:var(--muted);line-height:1.75;max-width:560px;margin:0 auto;
 }
+.svc-hero .trust-item{color:var(--muted)}
+.svc-hero .trust-dot{background:var(--co-blue)}
 .svc-list{background:var(--bg);padding:3rem 2rem}
 .svc-row{
   display:grid;
