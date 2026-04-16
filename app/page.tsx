@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import ScrollDrone from '@/components/ScrollDrone'
 
 export default function Home() {
   return (
@@ -82,6 +83,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ScrollDrone />
 
       <section id="quality">
         <div className="section-inner">
