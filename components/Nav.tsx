@@ -19,6 +19,7 @@ export default function Nav() {
       </Link>
       <div className="nav-links">
         <Link href="/#services">Services</Link>
+        <Link href="/#pricing">Pricing</Link>
         <Link href="/#local">Why Local</Link>
         <Link href="/#coverage">Coverage</Link>
         <Link href="/#contact">Contact</Link>
