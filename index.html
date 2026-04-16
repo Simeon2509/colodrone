@@ -53,7 +53,7 @@
     <h2 class="section-title">Our Services</h2>
     <p class="section-body">From luxury real estate listings along Cherry Creek to wedding ceremonies in the Rockies — we cover every aerial need across Colorado.</p>
     <div class="services-grid">
-      <div class="service-card" onclick="openModal('real-estate')">
+      <div class="service-card" onclick="window.location.href='real-estate.html'">
         <div class="service-accent"></div>
         <div class="service-num">01</div>
         <div class="service-name">Real Estate</div>
@@ -61,7 +61,7 @@
         <div class="service-tags"><span class="tag">For Sale</span><span class="tag">For Rent</span><span class="tag">Apartments</span><span class="tag">City Homes</span><span class="tag">Mountain Estates</span><span class="tag">4K Video</span></div>
         <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card" onclick="openModal('weddings')">
+      <div class="service-card" onclick="window.location.href='weddings.html'">
         <div class="service-accent"></div>
         <div class="service-num">02</div>
         <div class="service-name">Weddings &amp; Events</div>
@@ -69,7 +69,7 @@
         <div class="service-tags"><span class="tag">Mountain Venues</span><span class="tag">Front Range</span><span class="tag">Cinematic</span></div>
         <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card" onclick="openModal('construction')">
+      <div class="service-card" onclick="window.location.href='construction.html'">
         <div class="service-accent"></div>
         <div class="service-num">03</div>
         <div class="service-name">Construction &amp; Inspection</div>
@@ -77,7 +77,7 @@
         <div class="service-tags"><span class="tag">Time-lapse</span><span class="tag">Monthly Plans</span><span class="tag">Insurance</span><span class="tag">Hi-Res Reports</span></div>
         <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card" onclick="openModal('airbnb')">
+      <div class="service-card" onclick="window.location.href='airbnb.html'">
         <div class="service-accent"></div>
         <div class="service-num">04</div>
         <div class="service-name">Airbnb &amp; Short-Term Rentals</div>
@@ -85,7 +85,7 @@
         <div class="service-tags"><span class="tag">Airbnb</span><span class="tag">VRBO</span><span class="tag">Denver Rentals</span><span class="tag">Vertical Reels</span></div>
         <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card" onclick="openModal('venues')">
+      <div class="service-card" onclick="window.location.href='venues.html'">
         <div class="service-accent"></div>
         <div class="service-num">05</div>
         <div class="service-name">Venues, Hotels &amp; Golf Courses</div>
@@ -317,16 +317,15 @@
   </div>
 </footer>
 
-<!-- SERVICE MODALS -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+<!-- MODALS REMOVED — services now have dedicated pages -->
+<!--<div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
   <div class="modal" onclick="event.stopPropagation()">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-body" id="modal-body"></div>
   </div>
-</div>
+</div>-->
 
-<!-- Modal content templates -->
-<template id="tpl-real-estate">
+<!--<template id="tpl-real-estate">
   <div class="modal-eyebrow">Service 01</div>
   <h2 class="modal-title">Real Estate</h2>
   <p class="modal-lead">From a downtown Denver studio apartment to a 10-acre mountain estate in the Rockies — we make every property look its absolute best from above.</p>
@@ -452,7 +451,7 @@
   <div class="modal-cta-row">
     <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
   </div>
-</template>
+</template>-->
 
 <script src="js/main.js"></script>
 </body>

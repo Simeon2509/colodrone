@@ -246,6 +246,75 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 }
 .cert-dot{width:5px;height:5px;background:#22C55E;border-radius:50%}
 
+/* SERVICE PAGES */
+.sp-hero{
+  padding:8rem 2.5rem 5rem;background:var(--white);
+  text-align:center;border-bottom:0.5px solid var(--border2);
+}
+.sp-hero-label{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--co-blue-light);border:0.5px solid rgba(27,79,216,0.25);
+  padding:5px 14px;border-radius:20px;
+  font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--co-blue);
+  margin-bottom:1.5rem;
+}
+.sp-hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3rem,8vw,6rem);
+  letter-spacing:3px;color:var(--text);line-height:0.95;margin-bottom:1.2rem;
+}
+.sp-hero-desc{
+  font-size:clamp(0.9rem,1.4vw,1rem);color:var(--muted);
+  max-width:600px;margin:0 auto 2.5rem;line-height:1.75;
+}
+.sp-hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.sp-section{padding:5rem 2.5rem}
+.sp-section:nth-child(even){background:var(--white)}
+.sp-section:nth-child(odd){background:var(--bg)}
+.sp-inner{max-width:960px;margin:0 auto}
+.sp-two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.sp-deliver-list{list-style:none;display:flex;flex-direction:column;gap:0.9rem;margin-top:2rem}
+.sp-deliver-list li{
+  display:flex;align-items:flex-start;gap:0.9rem;
+  font-size:0.9rem;color:var(--text2);line-height:1.6;
+}
+.sp-deliver-list li::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--co-blue);flex-shrink:0;margin-top:7px;
+}
+.sp-type-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--border2);margin-top:2rem}
+.sp-type-item{
+  background:var(--white);padding:1.4rem 1.2rem;
+  font-size:0.82rem;color:var(--text2);line-height:1.5;
+}
+.sp-type-item strong{display:block;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;color:var(--text);font-size:1rem;margin-bottom:0.3rem}
+
+/* IMAGE GALLERY */
+.sp-gallery{padding:5rem 2.5rem;background:var(--bg)}
+.sp-gallery-inner{max-width:960px;margin:0 auto}
+.sp-gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:2.5rem}
+.sp-gallery-grid.two-col{grid-template-columns:repeat(2,1fr)}
+.img-slot{
+  background:var(--bg2);border:1.5px dashed var(--border2);border-radius:3px;
+  aspect-ratio:4/3;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:0.5rem;
+  color:var(--muted2);font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;
+  overflow:hidden;
+}
+.img-slot img{width:100%;height:100%;object-fit:cover;display:block}
+.img-slot.portrait{aspect-ratio:9/16}
+.img-slot.wide{grid-column:span 2;aspect-ratio:16/7}
+.img-slot-icon{font-size:1.4rem;opacity:0.4}
+.sp-cta{
+  background:#111827;padding:5rem 2.5rem;text-align:center;
+}
+.sp-cta-inner{max-width:600px;margin:0 auto}
+.sp-cta-title{
+  font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:3px;
+  color:white;margin-bottom:0.8rem;
+}
+.sp-cta-desc{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:2rem}
+
 /* SERVICE CARD — MORE INDICATOR */
 .service-more{
   margin-top:1.4rem;padding-top:1rem;

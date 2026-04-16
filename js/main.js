@@ -1,30 +1,5 @@
 // ColoDrone — main.js
 
-// Service modals
-const modalMap = {
-  'real-estate':  'tpl-real-estate',
-  'weddings':     'tpl-weddings',
-  'construction': 'tpl-construction',
-  'airbnb':       'tpl-airbnb',
-  'venues':       'tpl-venues',
-};
-
-function openModal(id) {
-  const tpl = document.getElementById(modalMap[id]);
-  if (!tpl) return;
-  document.getElementById('modal-body').innerHTML = tpl.innerHTML;
-  document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
-});
 
 
 
