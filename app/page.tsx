@@ -5,6 +5,16 @@ export default function Home() {
   return (
     <>
       <section id="hero">
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          src="/hero_bg.mp4"
+        />
+        <div className="hero-overlay" />
+        <div className="hero-content">
         <div className="hero-tag"><div className="tag-dot"></div>Proudly based in Denver, Colorado</div>
         <h1 className="hero-title"><span className="colo">Colo</span>Drone</h1>
         <p className="hero-subtitle-line">Colorado&apos;s Own Drone Photography &amp; Videography Service</p>
@@ -19,6 +29,7 @@ export default function Home() {
           <div className="trust-item"><div className="trust-dot"></div>4K HDR · Vertical &amp; Horizontal</div>
           <div className="trust-item"><div className="trust-dot"></div>Fully Insured</div>
           <div className="trust-item"><div className="trust-dot"></div>Same-Week Delivery</div>
+        </div>
         </div>
       </section>
 
