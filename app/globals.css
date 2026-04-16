@@ -280,24 +280,56 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 
 /* SCROLL DRONE */
 .scroll-drone-wrap{
-  /* scrollable distance = this - 100vh → 50vh to drive the animation */
   height:150vh;
   position:relative;
+  /* eat into the 6rem section padding above and below to close the gap */
+  margin-top:-5rem;
+  margin-bottom:-5rem;
+  z-index:1;
 }
 .scroll-drone-sticky{
   position:sticky;
-  /* vertically centre a ~330px tall canvas in the viewport */
-  top:calc(50vh - 175px);
+  top:calc(50vh - 210px);
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
-  /* height is only as tall as the canvas — no empty space above/below */
-  padding:1.5rem 0;
+  gap:1.2rem;
+  padding:1rem 0;
 }
 .scroll-drone-canvas{
   width:min(400px, 55vw);
   aspect-ratio:960/760;
   display:block;
+}
+.scroll-drone-hint{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.3rem;
+  opacity:1;
+  transition:opacity 0.4s;
+  pointer-events:none;
+}
+.scroll-drone-hint.hidden{opacity:0}
+.scroll-drone-hint-label{
+  font-size:0.6rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.35);
+  font-family:'DM Sans',sans-serif;
+}
+.scroll-drone-hint-chevron{
+  width:18px;
+  height:18px;
+  border-right:1.5px solid rgba(255,255,255,0.3);
+  border-bottom:1.5px solid rgba(255,255,255,0.3);
+  transform:rotate(45deg);
+  animation:droneChevron 1.2s ease-in-out infinite;
+}
+@keyframes droneChevron{
+  0%,100%{transform:rotate(45deg) translateY(0);opacity:0.3}
+  50%{transform:rotate(45deg) translateY(4px);opacity:1}
 }
 
 /* SERVICE PAGES */

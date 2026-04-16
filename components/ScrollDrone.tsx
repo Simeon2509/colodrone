@@ -5,12 +5,14 @@ export default function ScrollDrone() {
   const wrapRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const hintRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
     const canvas = canvasRef.current
     const wrap = wrapRef.current
-    if (!video || !canvas || !wrap) return
+    const hint = hintRef.current
+    if (!video || !canvas || !wrap || !hint) return
 
     const ctx = canvas.getContext('2d', { willReadFrequently: true })!
 
@@ -47,6 +49,8 @@ export default function ScrollDrone() {
       const scrollable = wrap.offsetHeight - window.innerHeight
       const progress = Math.max(0, Math.min(1, -rect.top / scrollable))
       if (video.duration) video.currentTime = progress * video.duration
+      // Hide hint once user has scrolled meaningfully through the animation
+      hint.classList.toggle('hidden', progress > 0.75)
     }
 
     const onScroll = () => {
@@ -77,6 +81,11 @@ export default function ScrollDrone() {
         />
         {/* Canvas has transparent bg — drone floats on whatever is behind it */}
         <canvas ref={canvasRef} className="scroll-drone-canvas" />
+        {/* Scroll nudge — fades out once the user is deep into the animation */}
+        <div ref={hintRef} className="scroll-drone-hint">
+          <span className="scroll-drone-hint-label">Scroll</span>
+          <div className="scroll-drone-hint-chevron" />
+        </div>
       </div>
     </div>
   )
