@@ -63,7 +63,8 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card">
+              <div className="pkg-card pkg-popular">
+                <div className="pkg-badge">Most Popular</div>
                 <div className="pkg-name">Standard</div>
                 <div className="pkg-price">$349</div>
                 <ul className="pkg-features">
@@ -73,10 +74,9 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card pkg-popular">
-                <div className="pkg-badge">Most Popular</div>
+              <div className="pkg-card">
                 <div className="pkg-name">Premium</div>
-                <div className="pkg-price">$599</div>
+                <div className="pkg-price">$479</div>
                 <ul className="pkg-features">
                   <li>Unlimited aerial photos</li><li>3 hour flight time</li>
                   <li>Full 4K HDR cinematic walkthrough video</li>
@@ -134,7 +134,7 @@ export default function Home() {
               <div className="pkg-card pkg-popular">
                 <div className="pkg-badge">Most Popular</div>
                 <div className="pkg-name">Cinematic</div>
-                <div className="pkg-price">$999</div>
+                <div className="pkg-price">$799</div>
                 <ul className="pkg-features">
                   <li>Full day coverage up to 8 hours</li><li>Unlimited aerial photos</li>
                   <li>Cinematic highlight film 3–5 minutes</li><li>4K HDR video delivery</li>
@@ -179,7 +179,8 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card">
+              <div className="pkg-card pkg-popular">
+                <div className="pkg-badge">Most Popular</div>
                 <div className="pkg-name">Monthly Progress</div>
                 <div className="pkg-price">$499</div>
                 <ul className="pkg-features">
@@ -190,10 +191,9 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card pkg-popular">
-                <div className="pkg-badge">Most Popular</div>
+              <div className="pkg-card">
                 <div className="pkg-name">Full Documentation</div>
-                <div className="pkg-price">$899</div>
+                <div className="pkg-price">$719</div>
                 <ul className="pkg-features">
                   <li>Weekly site visits</li><li>Unlimited aerial photos</li>
                   <li>4K video walkthrough each visit</li>
@@ -240,7 +240,8 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card">
+              <div className="pkg-card pkg-popular">
+                <div className="pkg-badge">Most Popular</div>
                 <div className="pkg-name">Listing Boost</div>
                 <div className="pkg-price">$449</div>
                 <ul className="pkg-features">
@@ -250,10 +251,9 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card pkg-popular">
-                <div className="pkg-badge">Most Popular</div>
+              <div className="pkg-card">
                 <div className="pkg-name">Super Host</div>
-                <div className="pkg-price">$749</div>
+                <div className="pkg-price">$599</div>
                 <ul className="pkg-features">
                   <li>Unlimited aerial photos</li><li>Full property cinematic video 2 min</li>
                   <li>3 vertical Reels for Instagram &amp; TikTok</li>
@@ -300,7 +300,8 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card">
+              <div className="pkg-card pkg-popular">
+                <div className="pkg-badge">Most Popular</div>
                 <div className="pkg-name">Showcase</div>
                 <div className="pkg-price">$899</div>
                 <ul className="pkg-features">
@@ -310,10 +311,9 @@ export default function Home() {
                 </ul>
                 <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
               </div>
-              <div className="pkg-card pkg-popular">
-                <div className="pkg-badge">Most Popular</div>
+              <div className="pkg-card">
                 <div className="pkg-name">Signature</div>
-                <div className="pkg-price">$1499</div>
+                <div className="pkg-price">$1199</div>
                 <ul className="pkg-features">
                   <li>Unlimited aerial photos</li><li>Full cinematic brand video 3–5 min</li>
                   <li>3 vertical Reels for social media</li><li>Time-lapse included</li>
