@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Real Estate Drone Photography — ColoDrone',
@@ -59,19 +60,40 @@ export default function RealEstatePage() {
         </div>
       </section>
 
+      {/* Photo gallery — 3 real aerial shots */}
       <section className="sp-gallery">
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
           <h2 className="section-title">Real Estate Shots</h2>
-          <div className="sp-gallery-grid">
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Hero Shot</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Vertical Reel</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Aerial View</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Neighborhood</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Twilight Shot</span></div>
-            <div className="img-slot portrait"><div className="img-slot-icon">📷</div><span>Vertical Reel</span></div>
-            <div className="img-slot"><div className="img-slot-icon">📷</div><span>Lot Overview</span></div>
-            <div className="img-slot wide"><div className="img-slot-icon">📷</div><span>Mountain Estate</span></div>
+          <div className="re-photo-grid">
+            <div className="re-photo re-photo-wide">
+              <Image
+                src="/images/real-estate/re-1.jpg"
+                alt="Aerial drone shot of Colorado real estate property"
+                fill
+                sizes="(max-width:768px) 100vw, 66vw"
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+            </div>
+            <div className="re-photo">
+              <Image
+                src="/images/real-estate/re-2.jpg"
+                alt="Aerial drone photography of residential property in Colorado"
+                fill
+                sizes="(max-width:768px) 100vw, 33vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="re-photo">
+              <Image
+                src="/images/real-estate/re-3.jpg"
+                alt="Wide aerial view of Colorado property from drone"
+                fill
+                sizes="(max-width:768px) 100vw, 33vw"
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
           </div>
         </div>
       </section>

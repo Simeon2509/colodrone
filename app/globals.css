@@ -424,6 +424,21 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 .img-slot.portrait{aspect-ratio:9/16}
 .img-slot.wide{grid-column:span 2;aspect-ratio:16/7}
 .img-slot-icon{font-size:1.4rem;opacity:0.4}
+/* REAL ESTATE PHOTO GRID */
+.re-photo-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  grid-template-rows:240px 240px;
+  gap:6px;
+  border-radius:4px;
+  overflow:hidden;
+}
+.re-photo{position:relative;overflow:hidden}
+.re-photo-wide{grid-row:span 2}
+@media(max-width:640px){
+  .re-photo-grid{grid-template-columns:1fr;grid-template-rows:220px 220px 220px}
+  .re-photo-wide{grid-row:span 1}
+}
 .sp-cta{
   background:#111827;padding:5rem 2.5rem;text-align:center;
 }
