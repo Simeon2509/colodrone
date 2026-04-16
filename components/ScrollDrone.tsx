@@ -4,27 +4,49 @@ import { useEffect, useRef } from 'react'
 export default function ScrollDrone() {
   const wrapRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
+    const canvas = canvasRef.current
     const wrap = wrapRef.current
-    if (!video || !wrap) return
+    if (!video || !canvas || !wrap) return
 
-    // Preload all frames so seeking is instant
+    const ctx = canvas.getContext('2d', { willReadFrequently: true })!
+
     video.preload = 'auto'
     video.load()
 
-    let raf: number
+    // Set canvas resolution to match video once loaded
+    video.addEventListener('loadedmetadata', () => {
+      canvas.width = video.videoWidth
+      canvas.height = video.videoHeight
+    }, { once: true })
 
+    // After each seek, draw the frame and strip white pixels → true transparency
+    const drawFrame = () => {
+      if (!video.videoWidth) return
+      canvas.width = canvas.width // fast clear
+      ctx.drawImage(video, 0, 0)
+      const img = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      const d = img.data
+      for (let i = 0; i < d.length; i += 4) {
+        // Any pixel close to white becomes fully transparent
+        if (d[i] > 230 && d[i + 1] > 230 && d[i + 2] > 230) {
+          d[i + 3] = 0
+        }
+      }
+      ctx.putImageData(img, 0, 0)
+    }
+
+    video.addEventListener('seeked', drawFrame)
+
+    let raf: number
     const update = () => {
       const rect = wrap.getBoundingClientRect()
       const scrollable = wrap.offsetHeight - window.innerHeight
-      const scrolled = -rect.top
-      const progress = Math.max(0, Math.min(1, scrolled / scrollable))
-
-      if (video.duration) {
-        video.currentTime = progress * video.duration
-      }
+      const progress = Math.max(0, Math.min(1, -rect.top / scrollable))
+      if (video.duration) video.currentTime = progress * video.duration
     }
 
     const onScroll = () => {
@@ -33,24 +55,28 @@ export default function ScrollDrone() {
     }
 
     window.addEventListener('scroll', onScroll, { passive: true })
-    update() // set initial frame on mount
+    update()
 
     return () => {
       window.removeEventListener('scroll', onScroll)
       cancelAnimationFrame(raf)
+      video.removeEventListener('seeked', drawFrame)
     }
   }, [])
 
   return (
     <div ref={wrapRef} className="scroll-drone-wrap">
       <div className="scroll-drone-sticky">
+        {/* Hidden video — only used as a pixel source */}
         <video
           ref={videoRef}
           src="/scroll_drone.mp4"
           muted
           playsInline
-          className="scroll-drone-video"
+          style={{ display: 'none' }}
         />
+        {/* Canvas has transparent bg — drone floats on whatever is behind it */}
+        <canvas ref={canvasRef} className="scroll-drone-canvas" />
       </div>
     </div>
   )

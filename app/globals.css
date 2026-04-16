@@ -280,29 +280,24 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 
 /* SCROLL DRONE */
 .scroll-drone-wrap{
-  height:200vh;
+  height:160vh;
   position:relative;
-  background:var(--bg);
 }
 .scroll-drone-sticky{
   position:sticky;
   top:0;
   height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
-  background:var(--bg);
+  /* No background — canvas is transparent so page bg shows through */
 }
-.scroll-drone-video{
-  /* Fill the full viewport so there is no visible rectangular edge */
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  /* White in the video multiplies with --bg to produce exactly --bg → seamless */
-  mix-blend-mode:multiply;
-  background:var(--bg);
-  /* Scale the drone graphic down without affecting the element size */
-  transform:scale(0.55);
+.scroll-drone-canvas{
+  /* aspect-ratio matches the 960×760 source video */
+  width:min(420px, 58vw);
+  aspect-ratio:960/760;
+  display:block;
 }
 
 /* SERVICE PAGES */
