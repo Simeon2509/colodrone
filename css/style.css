@@ -246,6 +246,66 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 }
 .cert-dot{width:5px;height:5px;background:#22C55E;border-radius:50%}
 
+/* SERVICE CARD — MORE INDICATOR */
+.service-more{
+  margin-top:1.4rem;padding-top:1rem;
+  border-top:0.5px solid var(--border);
+  font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--co-blue);display:flex;align-items:center;gap:6px;
+  transition:gap .2s;
+}
+.service-more span{transition:transform .2s;display:inline-block}
+.service-card:hover .service-more span{transform:translateX(4px)}
+
+/* MODAL */
+.modal-overlay{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(10,15,30,0.6);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;padding:1.5rem;
+  opacity:0;pointer-events:none;transition:opacity .25s;
+}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{
+  background:var(--white);max-width:640px;width:100%;
+  max-height:88vh;overflow-y:auto;border-radius:4px;
+  border:0.5px solid var(--border2);
+  padding:3rem;position:relative;
+  transform:translateY(16px);transition:transform .25s;
+}
+.modal-overlay.open .modal{transform:translateY(0)}
+.modal-close{
+  position:absolute;top:1.2rem;right:1.2rem;
+  background:var(--bg2);border:none;cursor:pointer;
+  width:32px;height:32px;border-radius:50%;
+  font-size:0.85rem;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.modal-close:hover{background:var(--bg3)}
+.modal-eyebrow{
+  font-size:0.68rem;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--co-blue);margin-bottom:0.6rem;
+}
+.modal-title{
+  font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:3px;
+  color:var(--text);margin-bottom:1rem;line-height:1;
+}
+.modal-lead{font-size:0.9rem;color:var(--text2);line-height:1.7;margin-bottom:2rem}
+.modal-section-title{
+  font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:2px;
+  color:var(--co-blue);text-transform:uppercase;
+  margin-bottom:0.7rem;margin-top:1.6rem;
+}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.modal-list li{
+  font-size:0.85rem;color:var(--muted);line-height:1.6;
+  padding-left:1.1rem;position:relative;
+}
+.modal-list li::before{
+  content:'—';position:absolute;left:0;color:var(--co-blue);font-size:0.75rem;
+}
+.modal-cta-row{margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
+
 /* RESPONSIVE */
 @media(max-width:768px){
   nav{padding:1rem 1.2rem}

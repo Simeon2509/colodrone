@@ -53,40 +53,45 @@
     <h2 class="section-title">Our Services</h2>
     <p class="section-body">From luxury real estate listings along Cherry Creek to wedding ceremonies in the Rockies — we cover every aerial need across Colorado.</p>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card" onclick="openModal('real-estate')">
         <div class="service-accent"></div>
         <div class="service-num">01</div>
         <div class="service-name">Real Estate</div>
         <div class="service-desc">Stunning aerial content that sells and rents faster. From downtown Denver apartments and city homes to sprawling mountain estates — wherever the property is, we deliver exterior walkarounds, neighborhood context, lot overviews and twilight shots that make every listing stand out.</div>
         <div class="service-tags"><span class="tag">For Sale</span><span class="tag">For Rent</span><span class="tag">Apartments</span><span class="tag">City Homes</span><span class="tag">Mountain Estates</span><span class="tag">4K Video</span></div>
+        <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="openModal('weddings')">
         <div class="service-accent"></div>
         <div class="service-num">02</div>
         <div class="service-name">Weddings &amp; Events</div>
         <div class="service-desc">Cinematic aerial coverage of your special day. Mountain ceremonies, Denver venues, outdoor festivals and corporate events across the Front Range.</div>
         <div class="service-tags"><span class="tag">Mountain Venues</span><span class="tag">Front Range</span><span class="tag">Cinematic</span></div>
+        <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="openModal('construction')">
         <div class="service-accent"></div>
         <div class="service-num">03</div>
         <div class="service-name">Construction &amp; Inspection</div>
         <div class="service-desc">Weekly or monthly aerial documentation of your Colorado build from groundbreaking to ribbon-cutting — plus high-resolution roof and property inspection reports for homeowners, insurance adjusters and property managers.</div>
         <div class="service-tags"><span class="tag">Time-lapse</span><span class="tag">Monthly Plans</span><span class="tag">Insurance</span><span class="tag">Hi-Res Reports</span></div>
+        <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="openModal('airbnb')">
         <div class="service-accent"></div>
         <div class="service-num">04</div>
         <div class="service-name">Airbnb &amp; Short-Term Rentals</div>
         <div class="service-desc">Stand out on Airbnb and VRBO with stunning aerial shots of your Denver or Colorado rental. Neighborhood context, exterior views, and scroll-stopping vertical reels for social media — everything you need to boost your listing.</div>
         <div class="service-tags"><span class="tag">Airbnb</span><span class="tag">VRBO</span><span class="tag">Denver Rentals</span><span class="tag">Vertical Reels</span></div>
+        <div class="service-more">See what's included <span>→</span></div>
       </div>
-      <div class="service-card">
+      <div class="service-card" onclick="openModal('venues')">
         <div class="service-accent"></div>
         <div class="service-num">05</div>
         <div class="service-name">Venues, Hotels &amp; Golf Courses</div>
         <div class="service-desc">Showcase your property at its best. Aerial footage and photos for event venues, hotels, resorts and golf courses across Colorado — highlight your grounds, surroundings and amenities in stunning 4K HDR delivered in both horizontal and vertical formats.</div>
         <div class="service-tags"><span class="tag">Event Venues</span><span class="tag">Hotels</span><span class="tag">Resorts</span><span class="tag">Golf Courses</span><span class="tag">4K HDR</span></div>
+        <div class="service-more">See what's included <span>→</span></div>
       </div>
     </div>
   </div>
@@ -311,6 +316,143 @@
     </div>
   </div>
 </footer>
+
+<!-- SERVICE MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Modal content templates -->
+<template id="tpl-real-estate">
+  <div class="modal-eyebrow">Service 01</div>
+  <h2 class="modal-title">Real Estate</h2>
+  <p class="modal-lead">From a downtown Denver studio apartment to a 10-acre mountain estate in the Rockies — we make every property look its absolute best from above.</p>
+  <div class="modal-section-title">What We Deliver</div>
+  <ul class="modal-list">
+    <li>Exterior flyover and walkaround in 4K HDR</li>
+    <li>Neighborhood and surroundings context shots</li>
+    <li>Lot overview and boundary footage</li>
+    <li>Twilight and golden hour shots</li>
+    <li>Both horizontal (MLS / websites) and vertical (Instagram / Reels) formats</li>
+    <li>Edited photos and video delivered within 3–5 business days</li>
+  </ul>
+  <div class="modal-section-title">Property Types</div>
+  <ul class="modal-list">
+    <li>Studio and multi-unit apartments</li>
+    <li>City homes and townhouses — Denver metro</li>
+    <li>Suburban single-family homes</li>
+    <li>Luxury properties and large estates</li>
+    <li>Mountain cabins and retreat properties</li>
+    <li>For-sale listings and rental marketing</li>
+  </ul>
+  <div class="modal-cta-row">
+    <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  </div>
+</template>
+
+<template id="tpl-weddings">
+  <div class="modal-eyebrow">Service 02</div>
+  <h2 class="modal-title">Weddings &amp; Events</h2>
+  <p class="modal-lead">One-of-a-kind aerial footage of your most important day — whether it's a mountaintop ceremony, a Denver rooftop reception, or a corporate event on the Front Range.</p>
+  <div class="modal-section-title">What We Deliver</div>
+  <ul class="modal-list">
+    <li>Cinematic aerial coverage of the ceremony and reception venue</li>
+    <li>Dramatic reveal shots of the venue and surroundings</li>
+    <li>Guest arrival and outdoor crowd footage</li>
+    <li>Landscape and mountain backdrop shots</li>
+    <li>Both horizontal and vertical edits for social sharing</li>
+    <li>Edited highlights delivered within 3–5 business days</li>
+  </ul>
+  <div class="modal-section-title">Event Types</div>
+  <ul class="modal-list">
+    <li>Weddings — mountain, outdoor and Denver venues</li>
+    <li>Corporate events and conferences</li>
+    <li>Outdoor festivals and concerts</li>
+    <li>Private celebrations and milestone events</li>
+  </ul>
+  <div class="modal-cta-row">
+    <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  </div>
+</template>
+
+<template id="tpl-construction">
+  <div class="modal-eyebrow">Service 03</div>
+  <h2 class="modal-title">Construction &amp; Inspection</h2>
+  <p class="modal-lead">Aerial documentation from groundbreaking to completion — and high-resolution inspection reports that are faster and safer than traditional methods.</p>
+  <div class="modal-section-title">Construction Progress</div>
+  <ul class="modal-list">
+    <li>Weekly or monthly aerial site documentation</li>
+    <li>Time-lapse sequences for developers and investors</li>
+    <li>Before, during and after comparison shots</li>
+    <li>Organized photo and video reports per visit</li>
+    <li>Coverage anywhere in Colorado</li>
+  </ul>
+  <div class="modal-section-title">Roof &amp; Property Inspection</div>
+  <ul class="modal-list">
+    <li>High-resolution aerial roof inspection imagery</li>
+    <li>Damage documentation for insurance claims</li>
+    <li>Full property perimeter and exterior reports</li>
+    <li>Faster and safer than sending someone on a ladder</li>
+    <li>Accepted by most major insurance adjusters</li>
+  </ul>
+  <div class="modal-cta-row">
+    <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  </div>
+</template>
+
+<template id="tpl-airbnb">
+  <div class="modal-eyebrow">Service 04</div>
+  <h2 class="modal-title">Airbnb &amp; Short-Term Rentals</h2>
+  <p class="modal-lead">Listings with aerial photos get more clicks, more bookings and higher nightly rates. We make your Denver or Colorado rental impossible to scroll past.</p>
+  <div class="modal-section-title">What We Deliver</div>
+  <ul class="modal-list">
+    <li>Aerial exterior and rooftop shots</li>
+    <li>Neighborhood and street context footage</li>
+    <li>Proximity to parks, mountains and city highlights</li>
+    <li>Scroll-stopping vertical Reels for Instagram and TikTok</li>
+    <li>Horizontal edits for Airbnb, VRBO and website listings</li>
+    <li>Delivered within 3–5 business days</li>
+  </ul>
+  <div class="modal-section-title">Property Types</div>
+  <ul class="modal-list">
+    <li>Airbnb and VRBO rentals in Denver and surrounding areas</li>
+    <li>Mountain cabins and ski-in/ski-out properties</li>
+    <li>Urban apartments and lofts</li>
+    <li>Vacation homes across Colorado</li>
+  </ul>
+  <div class="modal-cta-row">
+    <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  </div>
+</template>
+
+<template id="tpl-venues">
+  <div class="modal-eyebrow">Service 05</div>
+  <h2 class="modal-title">Venues, Hotels &amp; Golf Courses</h2>
+  <p class="modal-lead">Give guests, visitors and future bookings a stunning first impression. Aerial content that showcases your full property, grounds and location like nothing else can.</p>
+  <div class="modal-section-title">What We Deliver</div>
+  <ul class="modal-list">
+    <li>Full property and grounds flyover in 4K HDR</li>
+    <li>Surrounding landscape and location context</li>
+    <li>Amenity highlights — pools, terraces, fairways, event spaces</li>
+    <li>Aerial approach and reveal shots for marketing</li>
+    <li>Both horizontal (website, ads) and vertical (social media) formats</li>
+    <li>Seasonal shoots available — summer greens, winter snow</li>
+  </ul>
+  <div class="modal-section-title">Property Types</div>
+  <ul class="modal-list">
+    <li>Event and wedding venues</li>
+    <li>Hotels and boutique lodges</li>
+    <li>Mountain resorts and ski lodges</li>
+    <li>Golf courses — full course flyovers and hole-by-hole shots</li>
+    <li>Spas, ranches and retreat centers</li>
+  </ul>
+  <div class="modal-cta-row">
+    <button class="btn-primary" onclick="closeModal();document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Quote</button>
+  </div>
+</template>
 
 <script src="js/main.js"></script>
 </body>
