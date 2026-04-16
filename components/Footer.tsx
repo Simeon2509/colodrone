@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,8 +7,8 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-top">
           <div>
-            <div className="footer-logo"><span>Colo</span>Drone</div>
-            <div className="footer-tagline">Colorado&apos;s Own Drone Photography &amp; Videography Service</div>
+            <Image src="/logo.png" alt="ColoDrone" height={44} width={58} style={{ filter: 'brightness(0) invert(1)' }} />
+            <div className="footer-tagline" style={{ marginTop: '0.5rem' }}>Colorado&apos;s Own Drone Photography &amp; Videography Service</div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '4px', marginTop: '0.8rem' }}>
               <div style={{ width: '4px', height: '16px', background: '#3B6FD4' }}></div>
               <div style={{ width: '4px', height: '16px', background: 'rgba(255,255,255,0.2)' }}></div>

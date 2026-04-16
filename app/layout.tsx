@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "ColoDrone — Colorado's Own Drone Photography & Videography Service",
   description: 'Professional drone photography and videography based in Denver, Colorado. Real estate, weddings, construction, short-term rentals, venues and golf courses. FAA Part 107 Certified.',
   keywords: 'drone photography Colorado, drone videography Denver, aerial photography Colorado, drone service Denver, ColoDrone',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

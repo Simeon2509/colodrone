@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,8 +15,7 @@ export default function Nav() {
   return (
     <nav style={{ boxShadow: scrolled ? '0 1px 12px rgba(0,0,0,0.08)' : 'none' }}>
       <Link href="/" className="nav-logo">
-        <div className="nav-logo-text"><span>Colo</span>Drone</div>
-        <div className="logo-badge">Denver, CO</div>
+        <Image src="/logo.png" alt="ColoDrone" height={36} width={47} priority />
       </Link>
       <div className="nav-links">
         <Link href="/#services">Services</Link>
