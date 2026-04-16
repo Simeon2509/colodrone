@@ -316,14 +316,14 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
   font-size:0.6rem;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:rgba(255,255,255,0.35);
+  color:rgba(0,0,0,0.3);
   font-family:'DM Sans',sans-serif;
 }
 .scroll-drone-hint-chevron{
   width:18px;
   height:18px;
-  border-right:1.5px solid rgba(255,255,255,0.3);
-  border-bottom:1.5px solid rgba(255,255,255,0.3);
+  border-right:1.5px solid rgba(0,0,0,0.25);
+  border-bottom:1.5px solid rgba(0,0,0,0.25);
   transform:rotate(45deg);
   animation:droneChevron 1.2s ease-in-out infinite;
 }
