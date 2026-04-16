@@ -17,7 +17,7 @@ nav{
   background:rgba(237,238,240,0.95);backdrop-filter:blur(20px);
   border-bottom:0.5px solid var(--border2);
 }
-.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer}
 .nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:3px;color:var(--text)}
 .nav-logo-text span{color:var(--co-blue)}
 .logo-badge{
@@ -32,9 +32,16 @@ nav{
   background:var(--co-blue);color:white;
   padding:0.55rem 1.4rem;border-radius:3px;
   font-size:0.75rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;
-  cursor:pointer;border:none;transition:background .2s;
+  cursor:pointer;border:none;transition:background .2s;text-decoration:none;
+  display:inline-block;
 }
 .nav-cta:hover{background:var(--co-blue2)}
+
+/* FLAG STRIP */
+.co-flag-strip{
+  height:4px;
+  background:linear-gradient(90deg,var(--co-blue) 33%,white 33%,white 36%,var(--co-red) 36%,var(--co-red) 64%,white 64%,white 67%,var(--co-blue) 67%);
+}
 
 /* HERO */
 #hero{
@@ -42,10 +49,6 @@ nav{
   align-items:center;justify-content:center;
   position:relative;overflow:hidden;text-align:center;padding:2rem;
   background:var(--white);
-}
-.co-flag-strip{
-  position:absolute;top:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,var(--co-blue) 33%,white 33%,white 36%,var(--co-red) 36%,var(--co-red) 64%,white 64%,white 67%,var(--co-blue) 67%);
 }
 .hero-tag{
   display:inline-flex;align-items:center;gap:8px;
@@ -79,14 +82,14 @@ nav{
   background:var(--co-blue);color:white;
   padding:0.9rem 2.4rem;border-radius:3px;
   font-size:0.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;
-  cursor:pointer;border:none;transition:all .2s;
+  cursor:pointer;border:none;transition:all .2s;text-decoration:none;display:inline-block;
 }
 .btn-primary:hover{background:var(--co-blue2);transform:translateY(-1px)}
 .btn-outline{
   background:transparent;color:var(--text);
   padding:0.9rem 2.4rem;border-radius:3px;
   font-size:0.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;
-  cursor:pointer;border:1.5px solid var(--border2);transition:all .2s;
+  cursor:pointer;border:1.5px solid var(--border2);transition:all .2s;text-decoration:none;display:inline-block;
 }
 .btn-outline:hover{border-color:var(--co-blue);color:var(--co-blue);transform:translateY(-1px)}
 .trust-bar{
@@ -121,6 +124,7 @@ section{padding:6rem 2rem}
 .service-card{
   background:var(--white);padding:2.5rem;
   transition:background .25s;position:relative;overflow:hidden;cursor:pointer;
+  text-decoration:none;display:block;color:inherit;
 }
 .service-card:hover{background:var(--bg2)}
 .service-accent{
@@ -138,6 +142,17 @@ section{padding:6rem 2rem}
   color:var(--co-blue);font-size:0.68rem;letter-spacing:1px;text-transform:uppercase;
   padding:3px 8px;border-radius:2px;
 }
+
+/* SERVICE CARD — MORE INDICATOR */
+.service-more{
+  margin-top:1.4rem;padding-top:1rem;
+  border-top:0.5px solid var(--border);
+  font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--co-blue);display:flex;align-items:center;gap:6px;
+  transition:gap .2s;
+}
+.service-more span{transition:transform .2s;display:inline-block}
+.service-card:hover .service-more span{transform:translateX(4px)}
 
 /* QUALITY */
 #quality{background:var(--bg)}
@@ -162,7 +177,7 @@ section{padding:6rem 2rem}
   border:0.5px solid rgba(27,79,216,0.2);border-radius:3px;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;
 }
-.point-icon svg{width:14px;height:14px;stroke:var(--co-blue);fill:none;stroke-width:1.5}
+.point-icon svg{width:14px;height:14px;stroke:var(--co-blue);fill:none;strokeWidth:1.5px}
 .point-title{font-size:0.9rem;font-weight:500;color:var(--text);margin-bottom:0.2rem}
 .point-desc{font-size:0.82rem;color:var(--muted);line-height:1.6}
 
@@ -314,66 +329,6 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
   color:white;margin-bottom:0.8rem;
 }
 .sp-cta-desc{font-size:0.9rem;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:2rem}
-
-/* SERVICE CARD — MORE INDICATOR */
-.service-more{
-  margin-top:1.4rem;padding-top:1rem;
-  border-top:0.5px solid var(--border);
-  font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--co-blue);display:flex;align-items:center;gap:6px;
-  transition:gap .2s;
-}
-.service-more span{transition:transform .2s;display:inline-block}
-.service-card:hover .service-more span{transform:translateX(4px)}
-
-/* MODAL */
-.modal-overlay{
-  position:fixed;inset:0;z-index:1000;
-  background:rgba(10,15,30,0.6);backdrop-filter:blur(6px);
-  display:flex;align-items:center;justify-content:center;padding:1.5rem;
-  opacity:0;pointer-events:none;transition:opacity .25s;
-}
-.modal-overlay.open{opacity:1;pointer-events:all}
-.modal{
-  background:var(--white);max-width:640px;width:100%;
-  max-height:88vh;overflow-y:auto;border-radius:4px;
-  border:0.5px solid var(--border2);
-  padding:3rem;position:relative;
-  transform:translateY(16px);transition:transform .25s;
-}
-.modal-overlay.open .modal{transform:translateY(0)}
-.modal-close{
-  position:absolute;top:1.2rem;right:1.2rem;
-  background:var(--bg2);border:none;cursor:pointer;
-  width:32px;height:32px;border-radius:50%;
-  font-size:0.85rem;color:var(--muted);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s;
-}
-.modal-close:hover{background:var(--bg3)}
-.modal-eyebrow{
-  font-size:0.68rem;letter-spacing:2.5px;text-transform:uppercase;
-  color:var(--co-blue);margin-bottom:0.6rem;
-}
-.modal-title{
-  font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:3px;
-  color:var(--text);margin-bottom:1rem;line-height:1;
-}
-.modal-lead{font-size:0.9rem;color:var(--text2);line-height:1.7;margin-bottom:2rem}
-.modal-section-title{
-  font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:2px;
-  color:var(--co-blue);text-transform:uppercase;
-  margin-bottom:0.7rem;margin-top:1.6rem;
-}
-.modal-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
-.modal-list li{
-  font-size:0.85rem;color:var(--muted);line-height:1.6;
-  padding-left:1.1rem;position:relative;
-}
-.modal-list li::before{
-  content:'—';position:absolute;left:0;color:var(--co-blue);font-size:0.75rem;
-}
-.modal-cta-row{margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid var(--border)}
 
 /* RESPONSIVE */
 @media(max-width:768px){
