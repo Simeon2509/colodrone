@@ -2,41 +2,34 @@
 import { useEffect, useRef } from 'react'
 
 export default function ScrollDrone() {
-  const wrapRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const hintRef = useRef<HTMLDivElement>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
     const canvas = canvasRef.current
     const wrap = wrapRef.current
-    const hint = hintRef.current
-    if (!video || !canvas || !wrap || !hint) return
+    if (!video || !canvas || !wrap) return
 
     const ctx = canvas.getContext('2d', { willReadFrequently: true })!
 
     video.preload = 'auto'
     video.load()
 
-    // Set canvas resolution to match video once loaded
     video.addEventListener('loadedmetadata', () => {
       canvas.width = video.videoWidth
       canvas.height = video.videoHeight
     }, { once: true })
 
-    // After each seek, draw the frame and strip white pixels → true transparency
     const drawFrame = () => {
       if (!video.videoWidth) return
-      canvas.width = canvas.width // fast clear
+      canvas.width = canvas.width
       ctx.drawImage(video, 0, 0)
       const img = ctx.getImageData(0, 0, canvas.width, canvas.height)
       const d = img.data
       for (let i = 0; i < d.length; i += 4) {
-        // Any pixel close to white becomes fully transparent
-        if (d[i] > 230 && d[i + 1] > 230 && d[i + 2] > 230) {
-          d[i + 3] = 0
-        }
+        if (d[i] > 230 && d[i + 1] > 230 && d[i + 2] > 230) d[i + 3] = 0
       }
       ctx.putImageData(img, 0, 0)
     }
@@ -45,12 +38,22 @@ export default function ScrollDrone() {
 
     let raf: number
     const update = () => {
-      const rect = wrap.getBoundingClientRect()
-      const scrollable = wrap.offsetHeight - window.innerHeight
-      const progress = Math.max(0, Math.min(1, -rect.top / scrollable))
+      const first = document.getElementById('services')
+      const last  = document.getElementById('coverage')
+      if (!first || !last) return
+
+      const scrollY = window.scrollY
+      const vh      = window.innerHeight
+      const start   = first.getBoundingClientRect().top  + scrollY
+      const end     = last.getBoundingClientRect().bottom + scrollY
+
+      // Visibility: fade in when top of #services nears viewport, fade out when #coverage is past
+      const visible = scrollY + vh > start + 80 && scrollY < end - 80
+      wrap.style.opacity = visible ? '1' : '0'
+
+      // Progress through the entire zone (viewport center vs zone)
+      const progress = Math.max(0, Math.min(1, (scrollY + vh / 2 - start) / (end - start)))
       if (video.duration) video.currentTime = progress * video.duration
-      // Hide hint once user has scrolled meaningfully through the animation
-      hint.classList.toggle('hidden', progress > 0.75)
     }
 
     const onScroll = () => {
@@ -69,24 +72,9 @@ export default function ScrollDrone() {
   }, [])
 
   return (
-    <div ref={wrapRef} className="scroll-drone-wrap">
-      <div className="scroll-drone-sticky">
-        {/* Hidden video — only used as a pixel source */}
-        <video
-          ref={videoRef}
-          src="/scroll_drone.mp4"
-          muted
-          playsInline
-          style={{ display: 'none' }}
-        />
-        {/* Canvas has transparent bg — drone floats on whatever is behind it */}
-        <canvas ref={canvasRef} className="scroll-drone-canvas" />
-        {/* Scroll nudge — fades out once the user is deep into the animation */}
-        <div ref={hintRef} className="scroll-drone-hint">
-          <span className="scroll-drone-hint-label">Scroll</span>
-          <div className="scroll-drone-hint-chevron" />
-        </div>
-      </div>
+    <div ref={wrapRef} className="scroll-drone-fixed">
+      <video ref={videoRef} src="/scroll_drone.mp4" muted playsInline style={{ display: 'none' }} />
+      <canvas ref={canvasRef} className="scroll-drone-canvas" />
     </div>
   )
 }

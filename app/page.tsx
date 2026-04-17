@@ -5,6 +5,9 @@ import ScrollDrone from '@/components/ScrollDrone'
 export default function Home() {
   return (
     <>
+      {/* Floating drone — fixed on right, visible only while scrolling through content sections */}
+      <ScrollDrone />
+
       <section id="hero">
         <video
           className="hero-video"
@@ -339,8 +342,6 @@ export default function Home() {
         </div>
 
       </section>
-
-      <ScrollDrone />
 
       <section id="quality">
         <div className="section-inner">
