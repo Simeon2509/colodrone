@@ -172,33 +172,45 @@ section{padding:6rem 2rem}
 .service-card:hover .service-more span{transform:translateX(4px)}
 
 /* PRICING SERVICE BLOCKS */
-.pricing-svc{
+/* Clickable service cards */
+.svc-card{
+  display:block;text-decoration:none;
   border-top:1px solid var(--border2);
-  padding:4rem 2rem;
+  padding:3.5rem 2rem;
+  border-left:3px solid transparent;
+  transition:background 0.22s ease,border-left-color 0.22s ease;
+  cursor:pointer;
 }
-.pricing-svc:nth-child(even){background:var(--white)}
-.pricing-svc-inner{max-width:1100px;margin:0 auto}
-.pricing-svc-head{
-  display:flex;justify-content:space-between;align-items:flex-start;
-  gap:2rem;margin-bottom:2.5rem;
+.svc-card-alt{background:var(--white)}
+.svc-card:hover,.svc-card-on{
+  background:rgba(27,79,216,0.045);
+  border-left-color:var(--co-blue);
 }
-.pricing-svc-meta{flex:1}
-.pricing-svc-num{
+.svc-card-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;
+}
+.svc-card-meta{flex:1;min-width:0}
+.svc-num{
   font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:3px;
   color:var(--co-red);opacity:0.7;margin-bottom:0.2rem;
 }
-.pricing-svc-name{
+.svc-name{
   font-family:'Bebas Neue',sans-serif;
   font-size:clamp(1.6rem,2.5vw,2.4rem);letter-spacing:2px;
   color:var(--text);margin-bottom:0.6rem;
+  transition:color 0.2s;
 }
-.pricing-svc-desc{font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:0.9rem}
-.pricing-svc-link{
-  font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--co-blue);text-decoration:none;white-space:nowrap;padding-top:6px;
-  display:flex;align-items:center;gap:4px;
+.svc-card:hover .svc-name{color:var(--co-blue)}
+.svc-desc{font-size:0.88rem;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:0.9rem}
+.svc-vid-wrap{
+  width:0;height:210px;overflow:hidden;
+  border-radius:6px;flex-shrink:0;
+  opacity:0;
+  transition:width 0.38s cubic-bezier(0.4,0,0.2,1),opacity 0.38s ease,margin-left 0.38s ease;
 }
-.pricing-svc-link:hover{opacity:0.75}
+.svc-card:hover .svc-vid-wrap{width:340px;opacity:1;margin-left:2.5rem}
+.svc-vid{width:100%;height:100%;object-fit:cover;display:block}
 /* 4-col package grid */
 .pkg-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
@@ -267,7 +279,7 @@ details.pkg-card[open]>.pkg-body{display:flex;flex-direction:column;flex:1}
 details.pkg-card[open]>.pkg-body>.pkg-features{flex:1}
 @media(max-width:900px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){
-  .pricing-svc-head{flex-direction:column}
+  .svc-vid-wrap{display:none}
   .pkg-grid{
     display:flex;flex-direction:column;gap:0.4rem;
     background:transparent;border:none;border-radius:0;

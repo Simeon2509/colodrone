@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import ScrollDrone from '@/components/ScrollDrone'
+import ServiceCard from '@/components/ServiceCard'
 
 export default function Home() {
   return (
@@ -44,80 +45,25 @@ export default function Home() {
           <p className="section-body">Aerial photography and videography for every need across Colorado. Click any service to see packages and pricing.</p>
         </div>
 
-        {/* 01 — REAL ESTATE */}
-        <div className="pricing-svc">
-          <div className="pricing-svc-inner">
-            <div className="pricing-svc-head">
-              <div className="pricing-svc-meta">
-                <div className="pricing-svc-num">01</div>
-                <div className="pricing-svc-name">Real Estate</div>
-                <div className="pricing-svc-desc">Stunning aerial content that sells and rents faster. Exterior walkarounds, neighborhood context, lot overviews and twilight shots — for every listing across Colorado.</div>
-                <div className="service-tags"><span className="tag">For Sale</span><span className="tag">For Rent</span><span className="tag">Apartments</span><span className="tag">Mountain Estates</span><span className="tag">4K Video</span></div>
-              </div>
-              <Link href="/real-estate" className="pricing-svc-link">See packages &amp; pricing →</Link>
-            </div>
-          </div>
-        </div>
+        <ServiceCard index={0} num="01" name="Real Estate" href="/real-estate" video="/re_bg.mp4"
+          desc="Stunning aerial content that sells and rents faster. Exterior walkarounds, neighborhood context, lot overviews and twilight shots — for every listing across Colorado."
+          tags={['For Sale','For Rent','Apartments','Mountain Estates','4K Video']} />
 
-        {/* 02 — WEDDINGS & EVENTS */}
-        <div className="pricing-svc">
-          <div className="pricing-svc-inner">
-            <div className="pricing-svc-head">
-              <div className="pricing-svc-meta">
-                <div className="pricing-svc-num">02</div>
-                <div className="pricing-svc-name">Weddings &amp; Events</div>
-                <div className="pricing-svc-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and corporate events across the Front Range.</div>
-                <div className="service-tags"><span className="tag">Mountain Venues</span><span className="tag">Front Range</span><span className="tag">Cinematic</span><span className="tag">Corporate</span></div>
-              </div>
-              <Link href="/weddings" className="pricing-svc-link">See packages &amp; pricing →</Link>
-            </div>
-          </div>
-        </div>
+        <ServiceCard index={1} num="02" name="Weddings & Events" href="/weddings" video="/weddings_bg.mp4"
+          desc="Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and corporate events across the Front Range."
+          tags={['Mountain Venues','Front Range','Cinematic','Corporate']} />
 
-        {/* 03 — CONSTRUCTION & INSPECTION */}
-        <div className="pricing-svc">
-          <div className="pricing-svc-inner">
-            <div className="pricing-svc-head">
-              <div className="pricing-svc-meta">
-                <div className="pricing-svc-num">03</div>
-                <div className="pricing-svc-name">Construction &amp; Inspection</div>
-                <div className="pricing-svc-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports accepted by major insurance adjusters.</div>
-                <div className="service-tags"><span className="tag">Time-lapse</span><span className="tag">Monthly Plans</span><span className="tag">Insurance</span><span className="tag">Hi-Res Reports</span></div>
-              </div>
-              <Link href="/construction" className="pricing-svc-link">See packages &amp; pricing →</Link>
-            </div>
-          </div>
-        </div>
+        <ServiceCard index={2} num="03" name="Construction & Inspection" href="/construction" video="/construction_bg.mp4"
+          desc="Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports accepted by major insurance adjusters."
+          tags={['Time-lapse','Monthly Plans','Insurance','Hi-Res Reports']} />
 
-        {/* 04 — AIRBNB & SHORT-TERM RENTALS */}
-        <div className="pricing-svc">
-          <div className="pricing-svc-inner">
-            <div className="pricing-svc-head">
-              <div className="pricing-svc-meta">
-                <div className="pricing-svc-num">04</div>
-                <div className="pricing-svc-name">Airbnb &amp; Short-Term Rentals</div>
-                <div className="pricing-svc-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</div>
-                <div className="service-tags"><span className="tag">Airbnb</span><span className="tag">VRBO</span><span className="tag">Denver Rentals</span><span className="tag">Vertical Reels</span></div>
-              </div>
-              <Link href="/airbnb" className="pricing-svc-link">See packages &amp; pricing →</Link>
-            </div>
-          </div>
-        </div>
+        <ServiceCard index={3} num="04" name="Airbnb & Short-Term Rentals" href="/airbnb" video="/airbnb_bg.mp4"
+          desc="Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past."
+          tags={['Airbnb','VRBO','Denver Rentals','Vertical Reels']} />
 
-        {/* 05 — VENUES, HOTELS & GOLF */}
-        <div className="pricing-svc">
-          <div className="pricing-svc-inner">
-            <div className="pricing-svc-head">
-              <div className="pricing-svc-meta">
-                <div className="pricing-svc-num">05</div>
-                <div className="pricing-svc-name">Venues, Hotels &amp; Golf Courses</div>
-                <div className="pricing-svc-desc">Give future guests a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can.</div>
-                <div className="service-tags"><span className="tag">Event Venues</span><span className="tag">Hotels</span><span className="tag">Resorts</span><span className="tag">Golf Courses</span><span className="tag">4K HDR</span></div>
-              </div>
-              <Link href="/venues" className="pricing-svc-link">See packages &amp; pricing →</Link>
-            </div>
-          </div>
-        </div>
+        <ServiceCard index={4} num="05" name="Venues, Hotels & Golf Courses" href="/venues" video="/venues_bg.mp4"
+          desc="Give future guests a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can."
+          tags={['Event Venues','Hotels','Resorts','Golf Courses','4K HDR']} />
 
       </section>
 
