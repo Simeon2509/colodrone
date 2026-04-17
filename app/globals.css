@@ -257,14 +257,14 @@ section{padding:6rem 2rem}
   font-family:'DM Sans',sans-serif;
 }
 .pkg-cta-btn:hover{background:var(--co-blue2)}
-/* Details/summary — desktop: always open, no marker */
+/* Details/summary — open attr added by PkgAccordion.tsx on desktop */
 details.pkg-card{display:flex;flex-direction:column}
 details.pkg-card>summary{list-style:none;cursor:default;display:flex;flex-direction:column}
 details.pkg-card>summary::-webkit-details-marker{display:none}
 .pkg-summary-info{display:flex;flex-direction:column}
 .pkg-chevron{display:none}
-details.pkg-card>.pkg-body{display:flex!important;flex-direction:column;flex:1}
-details.pkg-card>.pkg-body>.pkg-features{flex:1}
+details.pkg-card[open]>.pkg-body{display:flex;flex-direction:column;flex:1}
+details.pkg-card[open]>.pkg-body>.pkg-features{flex:1}
 @media(max-width:900px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){
   .pricing-svc-head{flex-direction:column}
@@ -310,8 +310,8 @@ details.pkg-card>.pkg-body>.pkg-features{flex:1}
   details.pkg-card.pkg-custom .pkg-chevron{background:rgba(255,255,255,0.1)}
   details.pkg-card.pkg-custom .pkg-chevron::after{border-color:rgba(255,255,255,0.5)}
   details.pkg-card[open] .pkg-chevron::after{transform:rotate(225deg) translate(-1px,-1px)}
-  details.pkg-card>.pkg-body{display:none!important;padding:0 1.2rem 1.2rem}
-  details.pkg-card[open]>.pkg-body{display:flex!important}
+  details.pkg-card>.pkg-body{display:none;padding:0 1.2rem 1.2rem}
+  details.pkg-card[open]>.pkg-body{display:flex}
   details.pkg-card>summary .pkg-price{margin-bottom:0.1rem}
   details.pkg-card>summary .pkg-badge{margin-bottom:0.35rem}
   details.pkg-card>summary .pkg-custom-price-label{margin-bottom:0}
