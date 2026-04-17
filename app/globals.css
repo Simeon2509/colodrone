@@ -371,7 +371,7 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
 .scroll-drone-fixed{
   position:fixed;
   /* sit just outside the 1100px content column */
-  right:max(1rem, calc(50vw - 620px));
+  right:max(1rem, calc(50vw - 620px - 2cm));
   top:50%;
   transform:translateY(-50%);
   z-index:50;
@@ -380,7 +380,7 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
   transition:opacity 0.5s ease;
 }
 .scroll-drone-canvas{
-  width:min(220px, 16vw);
+  width:min(154px, 11vw);
   aspect-ratio:960/760;
   display:block;
 }
