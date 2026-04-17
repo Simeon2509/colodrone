@@ -18,7 +18,7 @@ export default function WeddingsPage() {
           <h1 className="sp-hero-title">Weddings &amp; Events</h1>
           <p className="sp-hero-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and private events across Colorado.</p>
           <div className="sp-hero-btns">
-            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/book?service=Weddings+%26+Events" className="btn-primary">Get a Free Quote</Link>
             <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function WeddingsPage() {
                   <li>Up to 2 hours aerial coverage</li><li>20 edited aerial photos</li>
                   <li>Horizontal &amp; vertical formats</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Essential&price=349" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card">
@@ -114,7 +114,7 @@ export default function WeddingsPage() {
                   <li>60 second highlight reel</li><li>4K HDR video delivery</li>
                   <li>Horizontal &amp; vertical formats</li><li>Premium editing</li><li>2–3 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Complete&price=599" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-popular">
@@ -131,7 +131,7 @@ export default function WeddingsPage() {
                   <li>Coordination with your photographer</li>
                   <li>Premium editing &amp; color grade</li><li>Same day preview clip</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Cinematic&price=799" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-custom">
@@ -144,7 +144,7 @@ export default function WeddingsPage() {
                   <li>Multi-day events</li><li>Multiple locations</li>
                   <li>Corporate events &amp; large festivals</li><li>Elopements &amp; intimate sessions</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
               </div>
             </details>
           </div>
@@ -155,7 +155,7 @@ export default function WeddingsPage() {
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Let&apos;s Capture Your Day</div>
           <p className="sp-cta-desc">Reach out with your date, venue and vision. We&apos;ll confirm availability and send a quote within 24 hours.</p>
-          <Link href="/#contact" className="btn-primary">Book a Wedding Shoot</Link>
+          <Link href="/book?service=Weddings+%26+Events" className="btn-primary">Book a Wedding Shoot</Link>
         </div>
       </section>
     </>

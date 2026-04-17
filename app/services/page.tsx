@@ -102,7 +102,7 @@ export default function ServicesPage() {
             Reach out and we&apos;ll recommend the right package for your project and budget.
             We respond within one business day with a custom quote.
           </p>
-          <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+          <Link href="/book" className="btn-primary">Get a Free Quote</Link>
         </div>
       </section>
     </>

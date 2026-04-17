@@ -18,7 +18,7 @@ export default function RealEstatePage() {
           <h1 className="sp-hero-title">Real Estate</h1>
           <p className="sp-hero-desc">From a downtown Denver studio to a 10-acre mountain estate — stunning aerial content that makes every listing sell and rent faster.</p>
           <div className="sp-hero-btns">
-            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/book?service=Real+Estate" className="btn-primary">Get a Free Quote</Link>
             <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function RealEstatePage() {
                   <li>Up to 10 aerial photos</li><li>1 hour flight time</li><li>Standard editing</li>
                   <li>JPG delivery</li><li>3–5 day turnaround</li><li>1 property</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Real+Estate&pkg=Basic&price=199" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-popular">
@@ -126,7 +126,7 @@ export default function RealEstatePage() {
                   <li>Horizontal &amp; vertical formats</li><li>JPG and RAW delivery</li>
                   <li>Twilight shot included</li><li>2–3 day turnaround</li><li>1 property</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Real+Estate&pkg=Standard&price=349" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card">
@@ -142,7 +142,7 @@ export default function RealEstatePage() {
                   <li>Premium editing &amp; color grade</li><li>JPG, RAW &amp; video delivery</li>
                   <li>Same day rush available</li><li>1 property</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Real+Estate&pkg=Premium&price=479" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-custom">
@@ -155,7 +155,7 @@ export default function RealEstatePage() {
                   <li>Multiple properties</li><li>Large estates or commercial listings</li>
                   <li>Ongoing monthly listing shoots</li><li>Special requirements</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                <Link href="/book?service=Real+Estate&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
               </div>
             </details>
           </div>
@@ -166,7 +166,7 @@ export default function RealEstatePage() {
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Ready to List?</div>
           <p className="sp-cta-desc">Tell us about your property and we&apos;ll send a quote within 24 hours. Most shoots can be scheduled within the same week.</p>
-          <Link href="/#contact" className="btn-primary">Book a Real Estate Shoot</Link>
+          <Link href="/book?service=Real+Estate" className="btn-primary">Book a Real Estate Shoot</Link>
         </div>
       </section>
     </>

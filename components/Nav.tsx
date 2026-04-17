@@ -24,7 +24,7 @@ export default function Nav() {
         <Link href="/#coverage">Coverage</Link>
         <Link href="/#contact">Contact</Link>
       </div>
-      <Link href="/#contact" className="nav-cta">Book a Flight</Link>
+      <Link href="/book" className="nav-cta">Book a Flight</Link>
     </nav>
   )
 }

@@ -18,7 +18,7 @@ export default function AirbnbPage() {
           <h1 className="sp-hero-title">Airbnb &amp; Short-Term Rentals</h1>
           <p className="sp-hero-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</p>
           <div className="sp-hero-btns">
-            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/book?service=Airbnb+%26+Short-Term+Rentals" className="btn-primary">Get a Free Quote</Link>
             <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function AirbnbPage() {
                   <li>Up to 15 aerial photos</li><li>1 hour flight</li><li>Standard editing</li>
                   <li>Horizontal format for Airbnb &amp; VRBO</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Starter&price=249" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-popular">
@@ -114,7 +114,7 @@ export default function AirbnbPage() {
                   <li>60 second social media video</li><li>Horizontal &amp; vertical formats</li>
                   <li>Premium editing &amp; color grade</li><li>JPG and video delivery</li><li>2–3 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Listing+Boost&price=449" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card">
@@ -130,7 +130,7 @@ export default function AirbnbPage() {
                   <li>Horizontal &amp; vertical formats</li><li>Premium editing</li>
                   <li>Same day preview clip</li><li>Priority scheduling</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Super+Host&price=599" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-custom">
@@ -144,7 +144,7 @@ export default function AirbnbPage() {
                   <li>Ski properties near Breckenridge, Vail &amp; Aspen</li>
                   <li>Ongoing content creation</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
               </div>
             </details>
           </div>
@@ -155,7 +155,7 @@ export default function AirbnbPage() {
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Boost Your Listing Today</div>
           <p className="sp-cta-desc">Tell us about your rental property and location. We&apos;ll get you booked and deliver content within the week.</p>
-          <Link href="/#contact" className="btn-primary">Book an Airbnb Shoot</Link>
+          <Link href="/book?service=Airbnb+%26+Short-Term+Rentals" className="btn-primary">Book an Airbnb Shoot</Link>
         </div>
       </section>
     </>

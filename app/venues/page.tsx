@@ -18,7 +18,7 @@ export default function VenuesPage() {
           <h1 className="sp-hero-title">Venues, Hotels &amp; Golf Courses</h1>
           <p className="sp-hero-desc">Give future guests and visitors a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can.</p>
           <div className="sp-hero-btns">
-            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/book?service=Venues%2C+Hotels+%26+Golf" className="btn-primary">Get a Free Quote</Link>
             <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function VenuesPage() {
                   <li>Exterior grounds coverage</li><li>Standard editing</li>
                   <li>Horizontal format</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Essential&price=499" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-popular">
@@ -121,7 +121,7 @@ export default function VenuesPage() {
                   <li>4K HDR video delivery</li><li>Horizontal &amp; vertical formats</li>
                   <li>Premium HDR editing</li><li>JPG, RAW &amp; video delivery</li><li>2–3 day turnaround</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Showcase&price=899" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card">
@@ -137,7 +137,7 @@ export default function VenuesPage() {
                   <li>4K HDR all formats</li><li>Premium editing &amp; color grade</li>
                   <li>Same day preview clip</li><li>Priority scheduling</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Signature&price=1199" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-custom">
@@ -152,7 +152,7 @@ export default function VenuesPage() {
                   <li>Ranches, retreats &amp; private clubs</li>
                   <li>Ongoing content partnership</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
               </div>
             </details>
           </div>
@@ -163,7 +163,7 @@ export default function VenuesPage() {
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Show Your Property at Its Best</div>
           <p className="sp-cta-desc">Tell us about your property and what you need. We&apos;ll put together a custom shoot plan and quote within 24 hours.</p>
-          <Link href="/#contact" className="btn-primary">Book a Property Shoot</Link>
+          <Link href="/book?service=Venues%2C+Hotels+%26+Golf" className="btn-primary">Book a Property Shoot</Link>
         </div>
       </section>
     </>

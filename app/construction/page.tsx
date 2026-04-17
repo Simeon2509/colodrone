@@ -18,7 +18,7 @@ export default function ConstructionPage() {
           <h1 className="sp-hero-title">Construction &amp; Inspection</h1>
           <p className="sp-hero-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports that are faster and safer than traditional methods.</p>
           <div className="sp-hero-btns">
-            <Link href="/#contact" className="btn-primary">Get a Free Quote</Link>
+            <Link href="/book?service=Construction+%26+Inspection" className="btn-primary">Get a Free Quote</Link>
             <Link href="/services" className="btn-outline">All Services</Link>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function ConstructionPage() {
                   <li>1 site visit</li><li>Up to 15 aerial photos</li><li>Basic progress report</li>
                   <li>JPG delivery</li><li>48 hour turnaround</li><li>1 location</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Construction+%26+Inspection&pkg=Single+Visit&price=299" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-popular">
@@ -120,7 +120,7 @@ export default function ConstructionPage() {
                   <li>JPG and RAW delivery</li><li>Priority scheduling</li>
                   <li>Coverage across Colorado</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Construction+%26+Inspection&pkg=Monthly+Progress&price=499" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card">
@@ -136,7 +136,7 @@ export default function ConstructionPage() {
                   <li>Detailed annotated reports</li><li>Investor update packages</li>
                   <li>Same day delivery available</li><li>Dedicated project contact</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                <Link href="/book?service=Construction+%26+Inspection&pkg=Full+Documentation&price=719" className="pkg-cta-btn">Book Now</Link>
               </div>
             </details>
             <details className="pkg-card pkg-custom">
@@ -151,7 +151,7 @@ export default function ConstructionPage() {
                   <li>Roof &amp; property inspection reports</li>
                   <li>Storm &amp; hail damage documentation</li>
                 </ul>
-                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                <Link href="/book?service=Construction+%26+Inspection&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
               </div>
             </details>
           </div>
@@ -162,7 +162,7 @@ export default function ConstructionPage() {
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Start Your Documentation</div>
           <p className="sp-cta-desc">Tell us about your site, schedule and needs. We&apos;ll set up a regular flight plan and deliver reports on time, every time.</p>
-          <Link href="/#contact" className="btn-primary">Book a Construction Flight</Link>
+          <Link href="/book?service=Construction+%26+Inspection" className="btn-primary">Book a Construction Flight</Link>
         </div>
       </section>
     </>

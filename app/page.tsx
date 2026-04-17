@@ -25,7 +25,7 @@ export default function Home() {
         <p className="hero-headline"><strong>Professionally flown. Beautifully shot.</strong> 4K HDR aerial photography and videography — delivered in both vertical and horizontal formats — serving Denver and all of Colorado.</p>
         <div className="hero-btns">
           <Link href="/services" className="btn-primary">Explore Services</Link>
-          <a href="#contact" className="btn-outline">Get a Free Quote</a>
+          <Link href="/book" className="btn-outline">Get a Free Quote</Link>
         </div>
         <div className="trust-bar">
           <div className="trust-item"><div className="trust-dot"></div>FAA Part 107 Certified</div>
@@ -67,7 +67,7 @@ export default function Home() {
                     <li>Up to 10 aerial photos</li><li>1 hour flight time</li><li>Standard editing</li>
                     <li>JPG delivery</li><li>3–5 day turnaround</li><li>1 property</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Real+Estate&pkg=Basic&price=199" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-popular">
@@ -82,7 +82,7 @@ export default function Home() {
                     <li>Horizontal &amp; vertical formats</li><li>JPG and RAW delivery</li>
                     <li>Twilight shot included</li><li>2–3 day turnaround</li><li>1 property</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Real+Estate&pkg=Standard&price=349" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card">
@@ -98,7 +98,7 @@ export default function Home() {
                     <li>Premium editing &amp; color grade</li><li>JPG, RAW &amp; video delivery</li>
                     <li>Same day rush available</li><li>1 property</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Real+Estate&pkg=Premium&price=479" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-custom">
@@ -111,7 +111,7 @@ export default function Home() {
                     <li>Multiple properties</li><li>Large estates or commercial listings</li>
                     <li>Ongoing monthly listing shoots</li><li>Special requirements</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                  <Link href="/book?service=Real+Estate&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
                 </div>
               </details>
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
                     <li>Up to 2 hours aerial coverage</li><li>20 edited aerial photos</li>
                     <li>Horizontal &amp; vertical formats</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Weddings+%26+Events&pkg=Essential&price=349" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card">
@@ -155,7 +155,7 @@ export default function Home() {
                     <li>60 second highlight reel</li><li>4K HDR video delivery</li>
                     <li>Horizontal &amp; vertical formats</li><li>Premium editing</li><li>2–3 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Weddings+%26+Events&pkg=Complete&price=599" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-popular">
@@ -172,7 +172,7 @@ export default function Home() {
                     <li>Coordination with your photographer</li>
                     <li>Premium editing &amp; color grade</li><li>Same day preview clip</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Weddings+%26+Events&pkg=Cinematic&price=799" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-custom">
@@ -185,7 +185,7 @@ export default function Home() {
                     <li>Multi-day events</li><li>Multiple locations</li>
                     <li>Corporate events &amp; large festivals</li><li>Elopements &amp; intimate sessions</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                  <Link href="/book?service=Weddings+%26+Events&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
                 </div>
               </details>
             </div>
@@ -215,7 +215,7 @@ export default function Home() {
                     <li>1 site visit</li><li>Up to 15 aerial photos</li><li>Basic progress report</li>
                     <li>JPG delivery</li><li>48 hour turnaround</li><li>1 location</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Construction+%26+Inspection&pkg=Single+Visit&price=299" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-popular">
@@ -231,7 +231,7 @@ export default function Home() {
                     <li>JPG and RAW delivery</li><li>Priority scheduling</li>
                     <li>Coverage across Colorado</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Construction+%26+Inspection&pkg=Monthly+Progress&price=499" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card">
@@ -247,7 +247,7 @@ export default function Home() {
                     <li>Detailed annotated reports</li><li>Investor update packages</li>
                     <li>Same day delivery available</li><li>Dedicated project contact</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Construction+%26+Inspection&pkg=Full+Documentation&price=719" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-custom">
@@ -262,7 +262,7 @@ export default function Home() {
                     <li>Roof &amp; property inspection reports</li>
                     <li>Storm &amp; hail damage documentation</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                  <Link href="/book?service=Construction+%26+Inspection&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
                 </div>
               </details>
             </div>
@@ -292,7 +292,7 @@ export default function Home() {
                     <li>Up to 15 aerial photos</li><li>1 hour flight</li><li>Standard editing</li>
                     <li>Horizontal format for Airbnb &amp; VRBO</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Starter&price=249" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-popular">
@@ -307,7 +307,7 @@ export default function Home() {
                     <li>60 second social media video</li><li>Horizontal &amp; vertical formats</li>
                     <li>Premium editing &amp; color grade</li><li>JPG and video delivery</li><li>2–3 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Listing+Boost&price=449" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card">
@@ -323,7 +323,7 @@ export default function Home() {
                     <li>Horizontal &amp; vertical formats</li><li>Premium editing</li>
                     <li>Same day preview clip</li><li>Priority scheduling</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Super+Host&price=599" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-custom">
@@ -337,7 +337,7 @@ export default function Home() {
                     <li>Ski properties near Breckenridge, Vail &amp; Aspen</li>
                     <li>Ongoing content creation</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
                 </div>
               </details>
             </div>
@@ -368,7 +368,7 @@ export default function Home() {
                     <li>Exterior grounds coverage</li><li>Standard editing</li>
                     <li>Horizontal format</li><li>JPG delivery</li><li>3–5 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Essential&price=499" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-popular">
@@ -383,7 +383,7 @@ export default function Home() {
                     <li>4K HDR video delivery</li><li>Horizontal &amp; vertical formats</li>
                     <li>Premium HDR editing</li><li>JPG, RAW &amp; video delivery</li><li>2–3 day turnaround</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Showcase&price=899" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card">
@@ -399,7 +399,7 @@ export default function Home() {
                     <li>4K HDR all formats</li><li>Premium editing &amp; color grade</li>
                     <li>Same day preview clip</li><li>Priority scheduling</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Signature&price=1199" className="pkg-cta-btn">Book Now</Link>
                 </div>
               </details>
               <details className="pkg-card pkg-custom">
@@ -414,7 +414,7 @@ export default function Home() {
                     <li>Ranches, retreats &amp; private clubs</li>
                     <li>Ongoing content partnership</li>
                   </ul>
-                  <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
                 </div>
               </details>
             </div>
