@@ -40,12 +40,12 @@ export default function Home() {
       <section id="services" style={{ background: 'var(--bg)', paddingBottom: 0 }}>
         <div className="section-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>What We Do</div>
-          <h2 className="section-title">Our Services &amp; Pricing</h2>
-          <p className="section-body">Transparent, flat-rate packages for every aerial need across Colorado. No hidden fees — what you see is what you pay.</p>
+          <h2 className="section-title">Our Services</h2>
+          <p className="section-body">Aerial photography and videography for every need across Colorado. Click any service to see packages and pricing.</p>
         </div>
 
         {/* 01 — REAL ESTATE */}
-        <div id="pricing" className="pricing-svc">
+        <div className="pricing-svc">
           <div className="pricing-svc-inner">
             <div className="pricing-svc-head">
               <div className="pricing-svc-meta">
@@ -54,66 +54,7 @@ export default function Home() {
                 <div className="pricing-svc-desc">Stunning aerial content that sells and rents faster. Exterior walkarounds, neighborhood context, lot overviews and twilight shots — for every listing across Colorado.</div>
                 <div className="service-tags"><span className="tag">For Sale</span><span className="tag">For Rent</span><span className="tag">Apartments</span><span className="tag">Mountain Estates</span><span className="tag">4K Video</span></div>
               </div>
-              <Link href="/real-estate" className="pricing-svc-link">Full service details →</Link>
-            </div>
-            <div className="pkg-grid">
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Basic</div>
-                  <div className="pkg-price">$199</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 10 aerial photos</li><li>1 hour flight time</li><li>Standard editing</li>
-                    <li>JPG delivery</li><li>3–5 day turnaround</li><li>1 property</li>
-                  </ul>
-                  <Link href="/book?service=Real+Estate&pkg=Basic&price=199" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-popular">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-badge">Most Popular</div>
-                  <div className="pkg-name">Standard</div>
-                  <div className="pkg-price">$349</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 25 aerial photos</li><li>2 hour flight time</li><li>Premium editing &amp; color grade</li>
-                    <li>Horizontal &amp; vertical formats</li><li>JPG and RAW delivery</li>
-                    <li>Twilight shot included</li><li>2–3 day turnaround</li><li>1 property</li>
-                  </ul>
-                  <Link href="/book?service=Real+Estate&pkg=Standard&price=349" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Premium</div>
-                  <div className="pkg-price">$479</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Unlimited aerial photos</li><li>3 hour flight time</li>
-                    <li>Full 4K HDR cinematic walkthrough video</li>
-                    <li>Horizontal 16:9 &amp; vertical 9:16 delivery</li>
-                    <li>Premium editing &amp; color grade</li><li>JPG, RAW &amp; video delivery</li>
-                    <li>Same day rush available</li><li>1 property</li>
-                  </ul>
-                  <Link href="/book?service=Real+Estate&pkg=Premium&price=479" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-custom">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Custom</div>
-                  <div className="pkg-custom-price-label">Get a Quote</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Multiple properties</li><li>Large estates or commercial listings</li>
-                    <li>Ongoing monthly listing shoots</li><li>Special requirements</li>
-                  </ul>
-                  <Link href="/book?service=Real+Estate&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-                </div>
-              </details>
+              <Link href="/real-estate" className="pricing-svc-link">See packages &amp; pricing →</Link>
             </div>
           </div>
         </div>
@@ -128,66 +69,7 @@ export default function Home() {
                 <div className="pricing-svc-desc">Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and corporate events across the Front Range.</div>
                 <div className="service-tags"><span className="tag">Mountain Venues</span><span className="tag">Front Range</span><span className="tag">Cinematic</span><span className="tag">Corporate</span></div>
               </div>
-              <Link href="/weddings" className="pricing-svc-link">Full service details →</Link>
-            </div>
-            <div className="pkg-grid">
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Essential</div>
-                  <div className="pkg-price">$349</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 2 hours aerial coverage</li><li>20 edited aerial photos</li>
-                    <li>Horizontal &amp; vertical formats</li><li>JPG delivery</li><li>3–5 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Weddings+%26+Events&pkg=Essential&price=349" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Complete</div>
-                  <div className="pkg-price">$599</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 4 hours aerial coverage</li><li>40 edited aerial photos</li>
-                    <li>60 second highlight reel</li><li>4K HDR video delivery</li>
-                    <li>Horizontal &amp; vertical formats</li><li>Premium editing</li><li>2–3 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Weddings+%26+Events&pkg=Complete&price=599" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-popular">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-badge">Most Popular</div>
-                  <div className="pkg-name">Cinematic</div>
-                  <div className="pkg-price">$799</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Full day coverage up to 8 hours</li><li>Unlimited aerial photos</li>
-                    <li>Cinematic highlight film 3–5 minutes</li><li>4K HDR video delivery</li>
-                    <li>Horizontal &amp; vertical formats</li>
-                    <li>Coordination with your photographer</li>
-                    <li>Premium editing &amp; color grade</li><li>Same day preview clip</li>
-                  </ul>
-                  <Link href="/book?service=Weddings+%26+Events&pkg=Cinematic&price=799" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-custom">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Custom</div>
-                  <div className="pkg-custom-price-label">Get a Quote</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Multi-day events</li><li>Multiple locations</li>
-                    <li>Corporate events &amp; large festivals</li><li>Elopements &amp; intimate sessions</li>
-                  </ul>
-                  <Link href="/book?service=Weddings+%26+Events&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-                </div>
-              </details>
+              <Link href="/weddings" className="pricing-svc-link">See packages &amp; pricing →</Link>
             </div>
           </div>
         </div>
@@ -202,69 +84,7 @@ export default function Home() {
                 <div className="pricing-svc-desc">Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports accepted by major insurance adjusters.</div>
                 <div className="service-tags"><span className="tag">Time-lapse</span><span className="tag">Monthly Plans</span><span className="tag">Insurance</span><span className="tag">Hi-Res Reports</span></div>
               </div>
-              <Link href="/construction" className="pricing-svc-link">Full service details →</Link>
-            </div>
-            <div className="pkg-grid">
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Single Visit</div>
-                  <div className="pkg-price">$299</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>1 site visit</li><li>Up to 15 aerial photos</li><li>Basic progress report</li>
-                    <li>JPG delivery</li><li>48 hour turnaround</li><li>1 location</li>
-                  </ul>
-                  <Link href="/book?service=Construction+%26+Inspection&pkg=Single+Visit&price=299" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-popular">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-badge">Most Popular</div>
-                  <div className="pkg-name">Monthly Progress</div>
-                  <div className="pkg-price">$499</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>1 visit per month</li><li>Up to 30 aerial photos per visit</li>
-                    <li>Detailed progress report</li><li>Before &amp; after comparison</li>
-                    <li>JPG and RAW delivery</li><li>Priority scheduling</li>
-                    <li>Coverage across Colorado</li>
-                  </ul>
-                  <Link href="/book?service=Construction+%26+Inspection&pkg=Monthly+Progress&price=499" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Full Documentation</div>
-                  <div className="pkg-price">$719</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Weekly site visits</li><li>Unlimited aerial photos</li>
-                    <li>4K video walkthrough each visit</li>
-                    <li>Full time-lapse groundbreaking to completion</li>
-                    <li>Detailed annotated reports</li><li>Investor update packages</li>
-                    <li>Same day delivery available</li><li>Dedicated project contact</li>
-                  </ul>
-                  <Link href="/book?service=Construction+%26+Inspection&pkg=Full+Documentation&price=719" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-custom">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Custom</div>
-                  <div className="pkg-custom-price-label">Get a Quote</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Large commercial developments</li><li>Multi-site projects</li>
-                    <li>Insurance &amp; legal documentation</li>
-                    <li>Roof &amp; property inspection reports</li>
-                    <li>Storm &amp; hail damage documentation</li>
-                  </ul>
-                  <Link href="/book?service=Construction+%26+Inspection&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-                </div>
-              </details>
+              <Link href="/construction" className="pricing-svc-link">See packages &amp; pricing →</Link>
             </div>
           </div>
         </div>
@@ -279,67 +99,7 @@ export default function Home() {
                 <div className="pricing-svc-desc">Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past.</div>
                 <div className="service-tags"><span className="tag">Airbnb</span><span className="tag">VRBO</span><span className="tag">Denver Rentals</span><span className="tag">Vertical Reels</span></div>
               </div>
-              <Link href="/airbnb" className="pricing-svc-link">Full service details →</Link>
-            </div>
-            <div className="pkg-grid">
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Starter</div>
-                  <div className="pkg-price">$249</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 15 aerial photos</li><li>1 hour flight</li><li>Standard editing</li>
-                    <li>Horizontal format for Airbnb &amp; VRBO</li><li>JPG delivery</li><li>3–5 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Starter&price=249" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-popular">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-badge">Most Popular</div>
-                  <div className="pkg-name">Listing Boost</div>
-                  <div className="pkg-price">$449</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 30 aerial photos</li><li>Vertical Reels for Instagram &amp; TikTok</li>
-                    <li>60 second social media video</li><li>Horizontal &amp; vertical formats</li>
-                    <li>Premium editing &amp; color grade</li><li>JPG and video delivery</li><li>2–3 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Listing+Boost&price=449" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Super Host</div>
-                  <div className="pkg-price">$599</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Unlimited aerial photos</li><li>Full property cinematic video 2 min</li>
-                    <li>3 vertical Reels for Instagram &amp; TikTok</li>
-                    <li>Twilight &amp; golden hour shots</li><li>4K HDR video delivery</li>
-                    <li>Horizontal &amp; vertical formats</li><li>Premium editing</li>
-                    <li>Same day preview clip</li><li>Priority scheduling</li>
-                  </ul>
-                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Super+Host&price=599" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-custom">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Custom</div>
-                  <div className="pkg-custom-price-label">Get a Quote</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Multiple properties</li><li>Large estate rentals</li>
-                    <li>Ski properties near Breckenridge, Vail &amp; Aspen</li>
-                    <li>Ongoing content creation</li>
-                  </ul>
-                  <Link href="/book?service=Airbnb+%26+Short-Term+Rentals&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-                </div>
-              </details>
+              <Link href="/airbnb" className="pricing-svc-link">See packages &amp; pricing →</Link>
             </div>
           </div>
         </div>
@@ -354,69 +114,7 @@ export default function Home() {
                 <div className="pricing-svc-desc">Give future guests a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can.</div>
                 <div className="service-tags"><span className="tag">Event Venues</span><span className="tag">Hotels</span><span className="tag">Resorts</span><span className="tag">Golf Courses</span><span className="tag">4K HDR</span></div>
               </div>
-              <Link href="/venues" className="pricing-svc-link">Full service details →</Link>
-            </div>
-            <div className="pkg-grid">
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Essential</div>
-                  <div className="pkg-price">$499</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 20 aerial photos</li><li>2 hour flight</li>
-                    <li>Exterior grounds coverage</li><li>Standard editing</li>
-                    <li>Horizontal format</li><li>JPG delivery</li><li>3–5 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Essential&price=499" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-popular">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-badge">Most Popular</div>
-                  <div className="pkg-name">Showcase</div>
-                  <div className="pkg-price">$899</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Up to 40 aerial photos</li><li>2 minute cinematic video</li>
-                    <li>4K HDR video delivery</li><li>Horizontal &amp; vertical formats</li>
-                    <li>Premium HDR editing</li><li>JPG, RAW &amp; video delivery</li><li>2–3 day turnaround</li>
-                  </ul>
-                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Showcase&price=899" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Signature</div>
-                  <div className="pkg-price">$1199</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Unlimited aerial photos</li><li>Full cinematic brand video 3–5 min</li>
-                    <li>3 vertical Reels for social media</li><li>Time-lapse included</li>
-                    <li>Seasonal shots available</li><li>Golf hole-by-hole flyovers included</li>
-                    <li>4K HDR all formats</li><li>Premium editing &amp; color grade</li>
-                    <li>Same day preview clip</li><li>Priority scheduling</li>
-                  </ul>
-                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Signature&price=1199" className="pkg-cta-btn">Book Now</Link>
-                </div>
-              </details>
-              <details className="pkg-card pkg-custom">
-                <summary className="pkg-summary"><div className="pkg-summary-info">
-                  <div className="pkg-name">Custom</div>
-                  <div className="pkg-custom-price-label">Get a Quote</div>
-                </div><span className="pkg-chevron" /></summary>
-                <div className="pkg-body">
-                  <ul className="pkg-features">
-                    <li>Multi-day shoots</li><li>Multiple properties or locations</li>
-                    <li>Golf course hole-by-hole full documentation</li>
-                    <li>Ranches, retreats &amp; private clubs</li>
-                    <li>Ongoing content partnership</li>
-                  </ul>
-                  <Link href="/book?service=Venues%2C+Hotels+%26+Golf&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-                </div>
-              </details>
+              <Link href="/venues" className="pricing-svc-link">See packages &amp; pricing →</Link>
             </div>
           </div>
         </div>
