@@ -51,6 +51,73 @@ export default function WeddingsPage() {
         </div>
       </section>
 
+      <section className="sp-section" style={{ background: 'var(--bg)' }}>
+        <div className="sp-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
+          <h2 className="section-title">Wedding &amp; Event Packages</h2>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for every celebration. All edits delivered via private gallery link.</p>
+          <div className="pkg-grid">
+            <div className="pkg-card">
+              <div className="pkg-summary-info">
+                <div className="pkg-name">Essential</div>
+                <div className="pkg-price">$349</div>
+              </div>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 2 hours aerial coverage</li><li>20 edited aerial photos</li>
+                  <li>Horizontal &amp; vertical formats</li><li>JPG delivery</li><li>3–5 day turnaround</li>
+                </ul>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Essential&price=349" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </div>
+            <div className="pkg-card">
+              <div className="pkg-summary-info">
+                <div className="pkg-name">Complete</div>
+                <div className="pkg-price">$599</div>
+              </div>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 4 hours aerial coverage</li><li>40 edited aerial photos</li>
+                  <li>60 second highlight reel</li><li>4K HDR video delivery</li>
+                  <li>Horizontal &amp; vertical formats</li><li>Premium editing</li><li>2–3 day turnaround</li>
+                </ul>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Complete&price=599" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </div>
+            <div className="pkg-card pkg-popular">
+              <div className="pkg-summary-info">
+                <div className="pkg-badge">Most Popular</div>
+                <div className="pkg-name">Cinematic</div>
+                <div className="pkg-price">$799</div>
+              </div>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Full day coverage up to 8 hours</li><li>Unlimited aerial photos</li>
+                  <li>Cinematic highlight film 3–5 minutes</li><li>4K HDR video delivery</li>
+                  <li>Horizontal &amp; vertical formats</li>
+                  <li>Coordination with your photographer</li>
+                  <li>Premium editing &amp; color grade</li><li>Same day preview clip</li>
+                </ul>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Cinematic&price=799" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </div>
+            <div className="pkg-card pkg-custom">
+              <div className="pkg-summary-info">
+                <div className="pkg-name">Custom</div>
+                <div className="pkg-custom-price-label">Get a Quote</div>
+              </div>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Multi-day events</li><li>Multiple locations</li>
+                  <li>Corporate events &amp; large festivals</li><li>Elopements &amp; intimate sessions</li>
+                </ul>
+                <Link href="/book?service=Weddings+%26+Events&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="sp-gallery">
         <div className="sp-gallery-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Our Work</div>
@@ -80,73 +147,6 @@ export default function WeddingsPage() {
             <div className="sp-type-item"><strong>Outdoor Festivals</strong>Concerts, markets and community events</div>
             <div className="sp-type-item"><strong>Private Parties</strong>Milestone birthdays, anniversaries and celebrations</div>
             <div className="sp-type-item"><strong>Venue Showcases</strong>Aerial content for event venue marketing</div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sp-section" style={{ background: 'var(--bg)' }}>
-        <div className="sp-inner">
-          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
-          <h2 className="section-title">Wedding &amp; Event Packages</h2>
-          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for every celebration. All edits delivered via private gallery link.</p>
-          <div className="pkg-grid">
-            <details className="pkg-card">
-              <summary className="pkg-summary"><div className="pkg-summary-info">
-                <div className="pkg-name">Essential</div>
-                <div className="pkg-price">$349</div>
-              </div><span className="pkg-chevron" /></summary>
-              <div className="pkg-body">
-                <ul className="pkg-features">
-                  <li>Up to 2 hours aerial coverage</li><li>20 edited aerial photos</li>
-                  <li>Horizontal &amp; vertical formats</li><li>JPG delivery</li><li>3–5 day turnaround</li>
-                </ul>
-                <Link href="/book?service=Weddings+%26+Events&pkg=Essential&price=349" className="pkg-cta-btn">Book Now</Link>
-              </div>
-            </details>
-            <details className="pkg-card">
-              <summary className="pkg-summary"><div className="pkg-summary-info">
-                <div className="pkg-name">Complete</div>
-                <div className="pkg-price">$599</div>
-              </div><span className="pkg-chevron" /></summary>
-              <div className="pkg-body">
-                <ul className="pkg-features">
-                  <li>Up to 4 hours aerial coverage</li><li>40 edited aerial photos</li>
-                  <li>60 second highlight reel</li><li>4K HDR video delivery</li>
-                  <li>Horizontal &amp; vertical formats</li><li>Premium editing</li><li>2–3 day turnaround</li>
-                </ul>
-                <Link href="/book?service=Weddings+%26+Events&pkg=Complete&price=599" className="pkg-cta-btn">Book Now</Link>
-              </div>
-            </details>
-            <details className="pkg-card pkg-popular">
-              <summary className="pkg-summary"><div className="pkg-summary-info">
-                <div className="pkg-badge">Most Popular</div>
-                <div className="pkg-name">Cinematic</div>
-                <div className="pkg-price">$799</div>
-              </div><span className="pkg-chevron" /></summary>
-              <div className="pkg-body">
-                <ul className="pkg-features">
-                  <li>Full day coverage up to 8 hours</li><li>Unlimited aerial photos</li>
-                  <li>Cinematic highlight film 3–5 minutes</li><li>4K HDR video delivery</li>
-                  <li>Horizontal &amp; vertical formats</li>
-                  <li>Coordination with your photographer</li>
-                  <li>Premium editing &amp; color grade</li><li>Same day preview clip</li>
-                </ul>
-                <Link href="/book?service=Weddings+%26+Events&pkg=Cinematic&price=799" className="pkg-cta-btn">Book Now</Link>
-              </div>
-            </details>
-            <details className="pkg-card pkg-custom">
-              <summary className="pkg-summary"><div className="pkg-summary-info">
-                <div className="pkg-name">Custom</div>
-                <div className="pkg-custom-price-label">Get a Quote</div>
-              </div><span className="pkg-chevron" /></summary>
-              <div className="pkg-body">
-                <ul className="pkg-features">
-                  <li>Multi-day events</li><li>Multiple locations</li>
-                  <li>Corporate events &amp; large festivals</li><li>Elopements &amp; intimate sessions</li>
-                </ul>
-                <Link href="/book?service=Weddings+%26+Events&pkg=Custom" className="pkg-cta-btn">Request Custom Quote</Link>
-              </div>
-            </details>
           </div>
         </div>
       </section>

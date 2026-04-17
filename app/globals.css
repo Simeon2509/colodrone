@@ -277,6 +277,8 @@ details.pkg-card>summary::-webkit-details-marker{display:none}
 .pkg-chevron{display:none}
 details.pkg-card[open]>.pkg-body{display:flex;flex-direction:column;flex:1}
 details.pkg-card[open]>.pkg-body>.pkg-features{flex:1}
+div.pkg-card>.pkg-body{display:flex;flex-direction:column;flex:1}
+div.pkg-card>.pkg-body>.pkg-features{flex:1}
 @media(max-width:900px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){
   .svc-vid-wrap{display:none}
