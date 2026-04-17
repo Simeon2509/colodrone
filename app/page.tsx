@@ -185,6 +185,158 @@ export default function Home() {
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Where We Fly</div>
           <h2 className="section-title">Covering All of Colorado</h2>
           <p className="section-body">Based in Denver but ready to fly anywhere across the great state of Colorado. Mountain towns, plains cities, ski resorts — we go where you need us.</p>
+
+          {/* Colorado SVG Map */}
+          <div className="co-map-wrap">
+            <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" width="100%" style={{ display: 'block' }} aria-label="ColoDrone coverage map of Colorado">
+              <defs>
+                <filter id="co-sketch" x="-4%" y="-4%" width="108%" height="108%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="4" seed="7" result="noise" />
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+                </filter>
+                <pattern id="co-dots" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <circle cx="20" cy="20" r="0.9" fill="rgba(255,255,255,0.05)" />
+                </pattern>
+                <radialGradient id="co-glow" cx="0" cy="0" r="24" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#1B4FD8" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="#1B4FD8" stopOpacity="0" />
+                </radialGradient>
+              </defs>
+
+              {/* Subtle dot grid */}
+              <rect width="800" height="500" fill="url(#co-dots)" />
+
+              {/* State border — sketchy rect */}
+              <rect x="40" y="28" width="720" height="444" rx="8" fill="none"
+                stroke="#1B4FD8" strokeWidth="1.8" opacity="0.55"
+                filter="url(#co-sketch)" />
+              <rect x="40" y="28" width="720" height="444" rx="8" fill="none"
+                stroke="rgba(255,255,255,0.07)" strokeWidth="1" />
+
+              {/* Rocky Mountains — triangle peaks, left ~40% of state */}
+              <g fill="none" stroke="#1B4FD8" strokeWidth="1" opacity="0.28" strokeLinejoin="round">
+                <polygon points="55,282 90,200 125,282" />
+                <polygon points="100,260 135,176 170,260" />
+                <polygon points="72,312 104,238 136,312" />
+                <polygon points="132,272 165,192 198,272" />
+                <polygon points="62,348 90,278 118,348" />
+                <polygon points="158,242 188,166 218,242" />
+                <polygon points="188,292 214,222 240,292" />
+                <polygon points="122,308 150,238 178,308" />
+                <polygon points="148,358 172,290 196,358" />
+                <polygon points="178,332 202,268 226,332" />
+                <polygon points="208,258 232,190 256,258" />
+                <polygon points="228,312 250,252 272,312" />
+                <polygon points="262,242 284,180 306,242" />
+                <polygon points="270,222 292,162 314,222" />
+                <polygon points="232,348 254,286 276,348" />
+                <polygon points="302,244 322,188 342,244" />
+                <polygon points="82,358 106,296 130,358" />
+                <polygon points="320,210 338,164 356,210" />
+              </g>
+              {/* Faint background ridge layer */}
+              <g fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="0.8" strokeLinejoin="round">
+                <polygon points="70,270 98,198 126,270" />
+                <polygon points="146,264 172,196 198,264" />
+                <polygon points="218,250 242,186 266,250" />
+                <polygon points="280,232 300,180 320,232" />
+              </g>
+
+              {/* Flight paths — animated dashes radiating from Denver */}
+              <g fill="none" strokeWidth="0.9" strokeDasharray="4 7">
+                {/* → Boulder */}
+                <path d="M 455 168 Q 441 148 427 139" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '0s' }} />
+                {/* → Fort Collins */}
+                <path d="M 455 168 Q 450 118 446 75" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '0.5s' }} />
+                {/* → Colorado Springs */}
+                <path d="M 455 168 Q 465 218 473 269" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '1s' }} />
+                {/* → Breckenridge */}
+                <path d="M 455 168 Q 394 148 348 197" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '0.25s' }} />
+                {/* → Vail */}
+                <path d="M 455 168 Q 382 148 314 180" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '0.75s' }} />
+                {/* → Aspen */}
+                <path d="M 455 168 Q 360 180 267 229" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '1.25s' }} />
+                {/* → Steamboat Springs */}
+                <path d="M 455 168 Q 358 118 266 87" stroke="rgba(255,255,255,0.2)" className="co-path" style={{ animationDelay: '0.4s' }} />
+              </g>
+
+              {/* — Steamboat Springs — */}
+              <g>
+                <circle cx="266" cy="87" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="278" y="83" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500">Steamboat Springs</text>
+                  <text x="278" y="95" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif">~3 hrs</text>
+                </g>
+              </g>
+
+              {/* — Fort Collins — */}
+              <g>
+                <circle cx="446" cy="75" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="458" y="71" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500">Fort Collins</text>
+                  <text x="458" y="83" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif">~1 hr</text>
+                </g>
+              </g>
+
+              {/* — Boulder — */}
+              <g>
+                <circle cx="427" cy="139" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="415" y="134" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500" textAnchor="end">Boulder</text>
+                  <text x="415" y="146" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif" textAnchor="end">~30 min</text>
+                </g>
+              </g>
+
+              {/* — Vail — */}
+              <g>
+                <circle cx="314" cy="180" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="302" y="174" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500" textAnchor="end">Vail</text>
+                  <text x="302" y="186" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif" textAnchor="end">~2 hrs</text>
+                </g>
+              </g>
+
+              {/* — Breckenridge — */}
+              <g>
+                <circle cx="348" cy="197" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="360" y="192" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500">Breckenridge</text>
+                  <text x="360" y="204" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif">~1.5 hrs</text>
+                </g>
+              </g>
+
+              {/* — Aspen — */}
+              <g>
+                <circle cx="267" cy="229" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="255" y="223" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500" textAnchor="end">Aspen</text>
+                  <text x="255" y="235" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif" textAnchor="end">~3 hrs</text>
+                </g>
+              </g>
+
+              {/* — Denver — home base with glow + pulse */}
+              <g transform="translate(455,168)">
+                <circle r="24" fill="url(#co-glow)" />
+                <circle r="11" fill="none" stroke="#1B4FD8" strokeWidth="1.5" className="co-pulse" />
+                <circle r="6" fill="#1B4FD8" stroke="white" strokeWidth="1.5" />
+                <circle r="2.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="13" y="-5" fontSize="10" fill="white" fontFamily="DM Sans, sans-serif" fontWeight="600">Denver</text>
+                  <text x="13" y="8" fontSize="7.5" fill="#4d7ce8" fontFamily="DM Sans, sans-serif" letterSpacing="1">HOME BASE</text>
+                </g>
+              </g>
+
+              {/* — Colorado Springs — */}
+              <g>
+                <circle cx="473" cy="269" r="3.5" fill="white" opacity="0.85" />
+                <g className="co-labels">
+                  <text x="485" y="264" fontSize="9" fill="rgba(255,255,255,0.88)" fontFamily="DM Sans, sans-serif" fontWeight="500">Colorado Springs</text>
+                  <text x="485" y="276" fontSize="7.5" fill="rgba(255,255,255,0.4)" fontFamily="DM Sans, sans-serif">~1 hr</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+
           <div className="coverage-grid">
             <div className="coverage-item"><div className="coverage-name">Denver</div><div className="coverage-dist">Home Base</div></div>
             <div className="coverage-item"><div className="coverage-name">Boulder</div><div className="coverage-dist">~30 min</div></div>

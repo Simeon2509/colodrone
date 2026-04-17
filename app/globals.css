@@ -379,11 +379,40 @@ div.pkg-card>.pkg-body>.pkg-features{flex:1}
 
 /* COVERAGE */
 #coverage{background:var(--white)}
-.coverage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);margin-top:3rem}
+.coverage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);margin-top:2rem}
 .coverage-item{background:var(--white);padding:1.8rem 1.5rem;text-align:center;transition:background .2s}
 .coverage-item:hover{background:var(--bg2)}
 .coverage-name{font-size:0.9rem;font-weight:500;color:var(--text);margin-bottom:0.3rem}
 .coverage-dist{font-size:0.72rem;letter-spacing:1px;color:var(--muted)}
+/* Colorado SVG map */
+.co-map-wrap{
+  background:#0b1120;
+  border-radius:8px;
+  overflow:hidden;
+  margin:2.5rem 0 0;
+  border:1px solid rgba(27,79,216,0.18);
+}
+@keyframes co-ping{
+  0%{transform:scale(1);opacity:0.85}
+  100%{transform:scale(3.2);opacity:0}
+}
+@keyframes co-flow{
+  to{stroke-dashoffset:-33}
+}
+.co-pulse{
+  transform-origin:0 0;
+  animation:co-ping 2.6s ease-out infinite;
+}
+.co-path{
+  animation:co-flow 2.8s linear infinite;
+}
+@media(max-width:600px){
+  .co-labels{display:none}
+  .co-map-wrap{margin-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .co-pulse,.co-path{animation:none}
+}
 
 /* CONTACT */
 #contact{background:var(--bg)}
