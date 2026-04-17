@@ -257,8 +257,46 @@ section{padding:6rem 2rem}
   font-family:'DM Sans',sans-serif;
 }
 .pkg-cta-btn:hover{background:var(--co-blue2)}
+/* Details/summary — desktop: always open, no marker */
+details.pkg-card{display:flex;flex-direction:column}
+details.pkg-card>summary{list-style:none;cursor:default;display:flex;flex-direction:column}
+details.pkg-card>summary::-webkit-details-marker{display:none}
+.pkg-summary-info{display:flex;flex-direction:column}
+.pkg-chevron{display:none}
+details.pkg-card>.pkg-body{display:flex!important;flex-direction:column;flex:1}
+details.pkg-card>.pkg-body>.pkg-features{flex:1}
 @media(max-width:900px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:540px){.pkg-grid{grid-template-columns:1fr}.pricing-svc-head{flex-direction:column}}
+@media(max-width:540px){
+  .pricing-svc-head{flex-direction:column}
+  .pkg-grid{
+    display:flex;flex-direction:column;gap:0.4rem;
+    background:transparent;border:none;border-radius:0;
+  }
+  details.pkg-card{
+    padding:0;border:0.5px solid var(--border2);border-radius:4px;
+    overflow:hidden;
+  }
+  details.pkg-card:hover,details.pkg-card.pkg-popular:hover{background:inherit}
+  details.pkg-card>summary{
+    cursor:pointer;padding:1rem 1.2rem;
+    display:flex;flex-direction:row;
+    justify-content:space-between;align-items:center;gap:0.75rem;
+  }
+  .pkg-summary-info{flex:1;min-width:0}
+  .pkg-chevron{
+    display:inline-block;flex-shrink:0;
+    width:8px;height:8px;
+    border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+    transform:rotate(45deg);margin-right:0.3rem;
+    transition:transform .2s;
+  }
+  details.pkg-card[open] .pkg-chevron{transform:rotate(225deg)}
+  details.pkg-card>.pkg-body{display:none!important;padding:0 1.2rem 1.2rem}
+  details.pkg-card[open]>.pkg-body{display:flex!important}
+  details.pkg-card>summary .pkg-price{margin-bottom:0.1rem}
+  details.pkg-card>summary .pkg-badge{margin-bottom:0.35rem}
+  details.pkg-card>summary .pkg-custom-price-label{margin-bottom:0}
+}
 
 /* QUALITY */
 #quality{background:var(--bg)}

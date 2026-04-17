@@ -88,6 +88,76 @@ export default function ConstructionPage() {
         </div>
       </section>
 
+      <section className="sp-section" style={{ background: 'var(--bg)' }}>
+        <div className="sp-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
+          <h2 className="section-title">Construction &amp; Inspection Packages</h2>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for progress documentation and property inspections across Colorado.</p>
+          <div className="pkg-grid">
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Single Visit</div>
+                <div className="pkg-price">$299</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>1 site visit</li><li>Up to 15 aerial photos</li><li>Basic progress report</li>
+                  <li>JPG delivery</li><li>48 hour turnaround</li><li>1 location</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-popular">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-badge">Most Popular</div>
+                <div className="pkg-name">Monthly Progress</div>
+                <div className="pkg-price">$499</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>1 visit per month</li><li>Up to 30 aerial photos per visit</li>
+                  <li>Detailed progress report</li><li>Before &amp; after comparison</li>
+                  <li>JPG and RAW delivery</li><li>Priority scheduling</li>
+                  <li>Coverage across Colorado</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Full Documentation</div>
+                <div className="pkg-price">$719</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Weekly site visits</li><li>Unlimited aerial photos</li>
+                  <li>4K video walkthrough each visit</li>
+                  <li>Full time-lapse groundbreaking to completion</li>
+                  <li>Detailed annotated reports</li><li>Investor update packages</li>
+                  <li>Same day delivery available</li><li>Dedicated project contact</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-custom">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Custom</div>
+                <div className="pkg-custom-price-label">Get a Quote</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Large commercial developments</li><li>Multi-site projects</li>
+                  <li>Insurance &amp; legal documentation</li>
+                  <li>Roof &amp; property inspection reports</li>
+                  <li>Storm &amp; hail damage documentation</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section className="sp-cta">
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Start Your Documentation</div>

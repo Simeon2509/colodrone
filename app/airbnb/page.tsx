@@ -83,6 +83,74 @@ export default function AirbnbPage() {
         </div>
       </section>
 
+      <section className="sp-section" style={{ background: 'var(--bg)' }}>
+        <div className="sp-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
+          <h2 className="section-title">Airbnb &amp; Rental Packages</h2>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for every rental type across Colorado. All edits delivered via private gallery link.</p>
+          <div className="pkg-grid">
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Starter</div>
+                <div className="pkg-price">$249</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 15 aerial photos</li><li>1 hour flight</li><li>Standard editing</li>
+                  <li>Horizontal format for Airbnb &amp; VRBO</li><li>JPG delivery</li><li>3–5 day turnaround</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-popular">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-badge">Most Popular</div>
+                <div className="pkg-name">Listing Boost</div>
+                <div className="pkg-price">$449</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 30 aerial photos</li><li>Vertical Reels for Instagram &amp; TikTok</li>
+                  <li>60 second social media video</li><li>Horizontal &amp; vertical formats</li>
+                  <li>Premium editing &amp; color grade</li><li>JPG and video delivery</li><li>2–3 day turnaround</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Super Host</div>
+                <div className="pkg-price">$599</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Unlimited aerial photos</li><li>Full property cinematic video 2 min</li>
+                  <li>3 vertical Reels for Instagram &amp; TikTok</li>
+                  <li>Twilight &amp; golden hour shots</li><li>4K HDR video delivery</li>
+                  <li>Horizontal &amp; vertical formats</li><li>Premium editing</li>
+                  <li>Same day preview clip</li><li>Priority scheduling</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-custom">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Custom</div>
+                <div className="pkg-custom-price-label">Get a Quote</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Multiple properties</li><li>Large estate rentals</li>
+                  <li>Ski properties near Breckenridge, Vail &amp; Aspen</li>
+                  <li>Ongoing content creation</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section className="sp-cta">
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Boost Your Listing Today</div>

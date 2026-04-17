@@ -89,6 +89,76 @@ export default function VenuesPage() {
         </div>
       </section>
 
+      <section className="sp-section" style={{ background: 'var(--bg)' }}>
+        <div className="sp-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
+          <h2 className="section-title">Venue &amp; Property Packages</h2>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for venues, hotels, resorts and golf courses across Colorado.</p>
+          <div className="pkg-grid">
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Essential</div>
+                <div className="pkg-price">$499</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 20 aerial photos</li><li>2 hour flight</li>
+                  <li>Exterior grounds coverage</li><li>Standard editing</li>
+                  <li>Horizontal format</li><li>JPG delivery</li><li>3–5 day turnaround</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-popular">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-badge">Most Popular</div>
+                <div className="pkg-name">Showcase</div>
+                <div className="pkg-price">$899</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 40 aerial photos</li><li>2 minute cinematic video</li>
+                  <li>4K HDR video delivery</li><li>Horizontal &amp; vertical formats</li>
+                  <li>Premium HDR editing</li><li>JPG, RAW &amp; video delivery</li><li>2–3 day turnaround</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Signature</div>
+                <div className="pkg-price">$1199</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Unlimited aerial photos</li><li>Full cinematic brand video 3–5 min</li>
+                  <li>3 vertical Reels for social media</li><li>Time-lapse included</li>
+                  <li>Seasonal shots available</li><li>Golf hole-by-hole flyovers included</li>
+                  <li>4K HDR all formats</li><li>Premium editing &amp; color grade</li>
+                  <li>Same day preview clip</li><li>Priority scheduling</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-custom">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Custom</div>
+                <div className="pkg-custom-price-label">Get a Quote</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Multi-day shoots</li><li>Multiple properties or locations</li>
+                  <li>Golf course hole-by-hole full documentation</li>
+                  <li>Ranches, retreats &amp; private clubs</li>
+                  <li>Ongoing content partnership</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section className="sp-cta">
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Show Your Property at Its Best</div>

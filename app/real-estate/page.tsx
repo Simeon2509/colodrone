@@ -95,6 +95,73 @@ export default function RealEstatePage() {
         </div>
       </section>
 
+      <section className="sp-section" style={{ background: 'var(--bg)' }}>
+        <div className="sp-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
+          <h2 className="section-title">Real Estate Packages</h2>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages — no hidden fees. Every shoot includes edited files delivered via private gallery link.</p>
+          <div className="pkg-grid">
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Basic</div>
+                <div className="pkg-price">$199</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 10 aerial photos</li><li>1 hour flight time</li><li>Standard editing</li>
+                  <li>JPG delivery</li><li>3–5 day turnaround</li><li>1 property</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-popular">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-badge">Most Popular</div>
+                <div className="pkg-name">Standard</div>
+                <div className="pkg-price">$349</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Up to 25 aerial photos</li><li>2 hour flight time</li><li>Premium editing &amp; color grade</li>
+                  <li>Horizontal &amp; vertical formats</li><li>JPG and RAW delivery</li>
+                  <li>Twilight shot included</li><li>2–3 day turnaround</li><li>1 property</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Premium</div>
+                <div className="pkg-price">$479</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Unlimited aerial photos</li><li>3 hour flight time</li>
+                  <li>Full 4K HDR cinematic walkthrough video</li>
+                  <li>Horizontal 16:9 &amp; vertical 9:16 delivery</li>
+                  <li>Premium editing &amp; color grade</li><li>JPG, RAW &amp; video delivery</li>
+                  <li>Same day rush available</li><li>1 property</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Book Now</Link>
+              </div>
+            </details>
+            <details className="pkg-card pkg-custom">
+              <summary className="pkg-summary"><div className="pkg-summary-info">
+                <div className="pkg-name">Custom</div>
+                <div className="pkg-custom-price-label">Get a Quote</div>
+              </div><span className="pkg-chevron" /></summary>
+              <div className="pkg-body">
+                <ul className="pkg-features">
+                  <li>Multiple properties</li><li>Large estates or commercial listings</li>
+                  <li>Ongoing monthly listing shoots</li><li>Special requirements</li>
+                </ul>
+                <Link href="/#contact" className="pkg-cta-btn">Request Custom Quote</Link>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section className="sp-cta">
         <div className="sp-cta-inner">
           <div className="sp-cta-title">Ready to List?</div>
