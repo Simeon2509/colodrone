@@ -281,16 +281,35 @@ details.pkg-card>.pkg-body>.pkg-features{flex:1}
     cursor:pointer;padding:1rem 1.2rem;
     display:flex;flex-direction:row;
     justify-content:space-between;align-items:center;gap:0.75rem;
+    user-select:none;-webkit-tap-highlight-color:transparent;
+    background:linear-gradient(90deg,transparent 0%,rgba(27,79,216,0.04) 100%);
+    border-left:3px solid var(--co-blue);
+    transition:background .15s;
+  }
+  details.pkg-card>summary:active{background:rgba(27,79,216,0.08)}
+  details.pkg-card.pkg-custom>summary{
+    background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.04) 100%);
+    border-left-color:rgba(255,255,255,0.2);
   }
   .pkg-summary-info{flex:1;min-width:0}
   .pkg-chevron{
-    display:inline-block;flex-shrink:0;
-    width:8px;height:8px;
-    border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
-    transform:rotate(45deg);margin-right:0.3rem;
+    display:inline-flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+    width:26px;height:26px;
+    border-radius:50%;
+    background:rgba(27,79,216,0.1);
+    position:relative;
+  }
+  .pkg-chevron::after{
+    content:'';display:block;
+    width:7px;height:7px;
+    border-right:2px solid var(--co-blue);border-bottom:2px solid var(--co-blue);
+    transform:rotate(45deg) translate(-1px,-1px);
     transition:transform .2s;
   }
-  details.pkg-card[open] .pkg-chevron{transform:rotate(225deg)}
+  details.pkg-card.pkg-custom .pkg-chevron{background:rgba(255,255,255,0.1)}
+  details.pkg-card.pkg-custom .pkg-chevron::after{border-color:rgba(255,255,255,0.5)}
+  details.pkg-card[open] .pkg-chevron::after{transform:rotate(225deg) translate(-1px,-1px)}
   details.pkg-card>.pkg-body{display:none!important;padding:0 1.2rem 1.2rem}
   details.pkg-card[open]>.pkg-body{display:flex!important}
   details.pkg-card>summary .pkg-price{margin-bottom:0.1rem}
