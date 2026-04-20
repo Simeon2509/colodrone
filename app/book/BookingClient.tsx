@@ -2,48 +2,20 @@
 
 /*
  * ╔══════════════════════════════════════════════════════════════════╗
- * ║   COLODRONE EMAILJS SETUP — DO THIS BEFORE GOING LIVE           ║
+ * ║   COLODRONE BOOKING FORM — 2-MINUTE SETUP                       ║
  * ╠══════════════════════════════════════════════════════════════════╣
  * ║                                                                  ║
- * ║  Step 1  — Go to emailjs.com and create a free account           ║
- * ║  Step 2  — Click "Add New Service" → Gmail →                     ║
- * ║            connect colodroneshop@gmail.com                       ║
- * ║  Step 3  — Copy your Service ID →                                ║
- * ║            replace YOUR_SERVICE_ID below                         ║
- * ║  Step 4  — Click "Email Templates" → "Create New Template"       ║
- * ║            CLIENT template subject:                              ║
- * ║              Your ColoDrone Consultation is Confirmed            ║
- * ║            Body variables: {{to_name}}, {{service}}, {{date}},   ║
- * ║              {{time}}, {{phone}}, {{to_email}}                   ║
- * ║  Step 5  — Copy that Template ID →                               ║
- * ║            replace YOUR_TEMPLATE_ID_CLIENT below                 ║
- * ║  Step 6  — Create a second template (owner notification)         ║
- * ║            Subject: New Consultation Booked — {{service}}        ║
- * ║            Body variables: {{client_name}}, {{client_email}},    ║
- * ║              {{phone}}, {{service}}, {{date}}, {{time}},         ║
- * ║              {{message}}                                         ║
- * ║  Step 7  — Copy that Template ID →                               ║
- * ║            replace YOUR_TEMPLATE_ID_OWNER below                  ║
- * ║  Step 8  — Go to Account → API Keys → copy your Public Key       ║
- * ║  Step 9  — Replace YOUR_PUBLIC_KEY below                         ║
- * ║  Step 10 — Test by making a booking on the live site and         ║
- * ║            confirming both emails arrive                         ║
+ * ║  Step 1 — Go to  https://web3forms.com                          ║
+ * ║  Step 2 — Enter  hello@colodrone.com  and click Get Access Key  ║
+ * ║  Step 3 — Copy the access key and paste it below                ║
+ * ║  Step 4 — Deploy — done. You will receive booking notifications  ║
+ * ║           at hello@colodrone.com instantly.                     ║
+ * ║                                                                  ║
  * ╚══════════════════════════════════════════════════════════════════╝
- *
- * NOTE — Apple Calendar / live availability sync:
- *   To pull your real availability from Apple Calendar you would need
- *   a backend endpoint that reads your iCloud CalDAV feed and returns
- *   blocked slots. For now the system uses localStorage for persisted
- *   bookings + a randomised busy-look on each page load (10–60% of
- *   slots pre-blocked). Add a /api/availability route when you're
- *   ready to wire up a calendar integration.
  */
 
-// ── SETUP REQUIRED ────────────────────────────────────────────────────
-const EMAILJS_SERVICE_ID      = 'YOUR_SERVICE_ID'
-const EMAILJS_TEMPLATE_CLIENT = 'YOUR_TEMPLATE_ID_CLIENT'
-const EMAILJS_TEMPLATE_OWNER  = 'YOUR_TEMPLATE_ID_OWNER'
-const EMAILJS_PUBLIC_KEY      = 'YOUR_PUBLIC_KEY'
+// ── PASTE YOUR WEB3FORMS ACCESS KEY HERE ─────────────────────────────
+const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY'
 // ─────────────────────────────────────────────────────────────────────
 
 import { useState, useEffect } from 'react'
@@ -243,33 +215,33 @@ export default function BookingClient() {
     const svcLabel = [form.service, pkgParam, priceParam ? `Starting at $${priceParam}` : ''].filter(Boolean).join(' — ')
 
     try {
-      const ejs = await import('@emailjs/browser')
-      ejs.init(EMAILJS_PUBLIC_KEY)
-
-      const common = { service: svcLabel, date: dateLong, time: timeStr, phone: form.phone, message: form.message || 'No additional notes' }
-
-      await Promise.all([
-        // Email to client
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLIENT, {
-          ...common,
-          to_name:  form.firstName,
-          to_email: form.email,
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key:   WEB3FORMS_KEY,
+          subject:      `New Booking — ${form.service}`,
+          from_name:    `${form.firstName} ${form.lastName}`,
+          name:         `${form.firstName} ${form.lastName}`,
+          email:        form.email,
+          phone:        form.phone,
+          service:      svcLabel,
+          date:         dateLong,
+          time:         timeStr,
+          message:      form.message || 'No additional notes',
+          // disable default success redirect
+          redirect:     false,
         }),
-        // Email to ColoDrone owner
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
-          ...common,
-          client_name:  `${form.firstName} ${form.lastName}`,
-          client_email: form.email,
-          to_email:     'colodroneshop@gmail.com',
-        }),
-      ])
+      })
+      const data = await res.json()
+      if (!res.ok || !data.success) throw new Error(data.message ?? 'Failed')
 
       saveBooked(key)
       setBookedSlots(prev => { const n = new Set(prev); n.add(key); return n })
       setSubmitted(true)
     } catch (err) {
-      console.error('EmailJS error:', err)
-      setSubmitErr('Something went wrong. Please email us directly at hello@colodrone.com or call us and we will get you booked.')
+      console.error('Booking error:', err)
+      setSubmitErr('Something went wrong. Please email us directly at hello@colodrone.com or call (303) 949-7775 and we will get you booked.')
     } finally {
       setSubmitting(false)
     }
