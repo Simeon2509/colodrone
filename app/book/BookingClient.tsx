@@ -1,21 +1,10 @@
 'use client'
 
-/*
- * ╔══════════════════════════════════════════════════════════════════╗
- * ║   COLODRONE BOOKING FORM — 2-MINUTE SETUP                       ║
- * ╠══════════════════════════════════════════════════════════════════╣
- * ║                                                                  ║
- * ║  Step 1 — Go to  https://web3forms.com                          ║
- * ║  Step 2 — Enter  hello@colodrone.com  and click Get Access Key  ║
- * ║  Step 3 — Copy the access key and paste it below                ║
- * ║  Step 4 — Deploy — done. You will receive booking notifications  ║
- * ║           at hello@colodrone.com instantly.                     ║
- * ║                                                                  ║
- * ╚══════════════════════════════════════════════════════════════════╝
- */
-
-// ── PASTE YOUR WEB3FORMS ACCESS KEY HERE ─────────────────────────────
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY'
+// ── EMAILJS CREDENTIALS ───────────────────────────────────────────────
+const EMAILJS_SERVICE_ID      = 'service_rwnxrgo'
+const EMAILJS_TEMPLATE_CLIENT = 'template_enc9gbw'
+const EMAILJS_TEMPLATE_OWNER  = 'template_r2sdyda'
+const EMAILJS_PUBLIC_KEY      = 'lg5qtatFPjG13S6I5'
 // ─────────────────────────────────────────────────────────────────────
 
 import { useState, useEffect } from 'react'
@@ -215,32 +204,36 @@ export default function BookingClient() {
     const svcLabel = [form.service, pkgParam, priceParam ? `Starting at $${priceParam}` : ''].filter(Boolean).join(' — ')
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key:   WEB3FORMS_KEY,
-          subject:      `New Booking — ${form.service}`,
-          from_name:    `${form.firstName} ${form.lastName}`,
-          name:         `${form.firstName} ${form.lastName}`,
-          email:        form.email,
-          phone:        form.phone,
-          service:      svcLabel,
-          date:         dateLong,
-          time:         timeStr,
-          message:      form.message || 'No additional notes',
-          // disable default success redirect
-          redirect:     false,
+      const ejs = await import('@emailjs/browser')
+      ejs.init(EMAILJS_PUBLIC_KEY)
+
+      const common = {
+        service: svcLabel,
+        date:    dateLong,
+        time:    timeStr,
+        phone:   form.phone,
+        message: form.message || 'No additional notes',
+      }
+
+      await Promise.all([
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLIENT, {
+          ...common,
+          to_name:  form.firstName,
+          to_email: form.email,
         }),
-      })
-      const data = await res.json()
-      if (!res.ok || !data.success) throw new Error(data.message ?? 'Failed')
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
+          ...common,
+          client_name:  `${form.firstName} ${form.lastName}`,
+          client_email: form.email,
+          to_email:     'hello@colodrone.com',
+        }),
+      ])
 
       saveBooked(key)
       setBookedSlots(prev => { const n = new Set(prev); n.add(key); return n })
       setSubmitted(true)
     } catch (err) {
-      console.error('Booking error:', err)
+      console.error('EmailJS error:', err)
       setSubmitErr('Something went wrong. Please email us directly at hello@colodrone.com or call (303) 949-7775 and we will get you booked.')
     } finally {
       setSubmitting(false)
