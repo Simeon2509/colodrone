@@ -232,12 +232,9 @@ export default function BookingClient() {
       saveBooked(key)
       setBookedSlots(prev => { const n = new Set(prev); n.add(key); return n })
       setSubmitted(true)
-    } catch (err: unknown) {
+    } catch (err) {
       console.error('EmailJS error:', err)
-      const msg = (err && typeof err === 'object' && 'text' in err)
-        ? String((err as {text:string}).text)
-        : (err instanceof Error ? err.message : String(err))
-      setSubmitErr(`Debug: ${msg}`)
+      setSubmitErr('Something went wrong. Please email us directly at hello@colodrone.com or call (303) 949-7775 and we will get you booked.')
     } finally {
       setSubmitting(false)
     }
