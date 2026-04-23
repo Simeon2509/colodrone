@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PkgAccordion from '@/components/PkgAccordion'
@@ -26,6 +27,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-M8JGM373H7" strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-M8JGM373H7');
+        `}</Script>
         <div className="co-flag-strip" />
         <Nav />
         <PkgAccordion />
