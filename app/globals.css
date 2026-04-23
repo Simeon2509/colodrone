@@ -869,6 +869,14 @@ footer{background:#111827;padding:3rem 2.5rem 2rem}
   padding:0.9rem 1rem;background:var(--bg);border-radius:3px;
   border-left:3px solid var(--co-blue);
 }
+.bk-payment-note{margin-top:1rem;padding:1.1rem 1.25rem;background:var(--co-blue-light);border:1px solid rgba(27,79,216,0.2);border-radius:4px}
+.bk-payment-title{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--co-blue);font-weight:500;margin-bottom:0.4rem}
+.bk-payment-body{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.bk-confirm-payment{background:var(--bg);border:1px solid var(--border2);border-radius:4px;padding:1.5rem;margin:1.5rem 0;text-align:left}
+.bk-confirm-payment-title{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--co-blue);font-weight:500;margin-bottom:1rem}
+.bk-confirm-payment-steps{display:flex;flex-direction:column;gap:0.9rem}
+.bk-confirm-step{display:flex;gap:1rem;align-items:flex-start;font-size:0.85rem;color:var(--muted);line-height:1.6}
+.bk-confirm-step-num{width:22px;height:22px;border-radius:50%;background:var(--co-blue);color:#fff;font-size:0.7rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .bk-submit-err{
   font-size:0.82rem;color:var(--co-red);line-height:1.55;
   background:rgba(200,16,46,0.05);padding:0.85rem 1rem;border-radius:3px;

@@ -409,6 +409,10 @@ export default function Home() {
               <summary className="faq-question">Are you insured?</summary>
               <p className="faq-answer">Yes. ColoDrone carries full liability insurance for every flight. If your venue, HOA, or client requires a certificate of insurance, we can provide one before the shoot.</p>
             </details>
+            <details className="faq-item">
+              <summary className="faq-question">How does payment work?</summary>
+              <p className="faq-answer">A 50% deposit is required to confirm your shoot date — plus any applicable mileage fee for locations outside Denver. The remaining 50% is due upon delivery of your edited files via gallery link. Payment details are discussed during your free consultation call.</p>
+            </details>
           </div>
         </div>
       </section>

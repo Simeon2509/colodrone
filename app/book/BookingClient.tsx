@@ -256,6 +256,23 @@ export default function BookingClient() {
             <strong>{form.phone}</strong>. Check your email for your confirmation.
           </p>
           {svcLabel && <div className="bk-badge">{svcLabel}</div>}
+          <div className="bk-confirm-payment">
+            <div className="bk-confirm-payment-title">What Happens Next</div>
+            <div className="bk-confirm-payment-steps">
+              <div className="bk-confirm-step">
+                <div className="bk-confirm-step-num">1</div>
+                <div>We call you at your chosen time to confirm details and answer any questions.</div>
+              </div>
+              <div className="bk-confirm-step">
+                <div className="bk-confirm-step-num">2</div>
+                <div>A <strong>50% deposit</strong> (plus mileage if outside Denver) is due to lock in your shoot date.</div>
+              </div>
+              <div className="bk-confirm-step">
+                <div className="bk-confirm-step-num">3</div>
+                <div>We fly, edit, and deliver your files. The remaining <strong>50% is due upon delivery</strong>.</div>
+              </div>
+            </div>
+          </div>
           <div className="bk-confirm-actions">
             <Link href="/" className="btn-primary">Back to Home</Link>
             <button className="btn-outline" onClick={() => { window.location.href = '/book' }}>
@@ -459,6 +476,12 @@ export default function BookingClient() {
               We will call you at the phone number provided at your chosen time.
               This consultation is completely free with no obligation.
             </p>
+            <div className="bk-payment-note">
+              <div className="bk-payment-title">How Payment Works</div>
+              <div className="bk-payment-body">
+                A <strong>50% deposit</strong> is due to confirm your shoot date — plus any applicable mileage fee for locations outside Denver. The remaining <strong>50% is due upon delivery</strong> of your edited files.
+              </div>
+            </div>
 
             {submitErr && <div className="bk-submit-err">{submitErr}</div>}
 
