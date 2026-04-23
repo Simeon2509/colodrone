@@ -380,6 +380,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="faq" style={{ background: 'var(--bg)' }}>
+        <div className="section-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>FAQ</div>
+          <h2 className="section-title">Common Questions</h2>
+          <div className="faq-list">
+            <details className="faq-item">
+              <summary className="faq-question">Do you need a permit or FAA authorization to fly?</summary>
+              <p className="faq-answer">Yes — and we handle all of it. We are FAA Part 107 certified and file LAANC authorizations for any controlled airspace, including areas near DIA and downtown Denver. You don't need to do anything on your end.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">What happens if the weather is bad on shoot day?</summary>
+              <p className="faq-answer">We monitor conditions closely leading up to your shoot. If wind, rain, or low visibility makes flying unsafe, we'll reschedule at no charge. Colorado weather moves fast — we're flexible and will find the next available window that works for both of us.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">How far outside Denver do you travel?</summary>
+              <p className="faq-answer">We cover all of Colorado — from Boulder and Fort Collins to Aspen, Vail, and Steamboat Springs. Locations within the Denver metro are included in all package prices. For shoots further out, a travel fee applies based on mileage.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">How long does it take to get the edited files?</summary>
+              <p className="faq-answer">Most shoots are delivered within 3–5 business days via a private gallery link. Need it faster? Same-day rush delivery is available on select packages — just mention it when you book.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">What formats do you deliver in?</summary>
+              <p className="faq-answer">Every shoot is delivered in both horizontal (16:9) and vertical (9:16) formats so you have content ready for your website, MLS listing, Instagram Reels, and TikTok. Photos are delivered as high-resolution JPGs, with RAW files available on Standard and Premium packages.</p>
+            </details>
+            <details className="faq-item">
+              <summary className="faq-question">Are you insured?</summary>
+              <p className="faq-answer">Yes. ColoDrone carries full liability insurance for every flight. If your venue, HOA, or client requires a certificate of insurance, we can provide one before the shoot.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div className="section-inner">
           <div className="contact-grid">
