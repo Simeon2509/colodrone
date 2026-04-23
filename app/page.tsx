@@ -411,7 +411,7 @@ export default function Home() {
             </details>
             <details className="faq-item">
               <summary className="faq-question">How does payment work?</summary>
-              <p className="faq-answer">A 50% deposit is required to confirm your shoot date — plus any applicable mileage fee for locations outside Denver. The remaining 50% is due upon delivery of your edited files via gallery link. Payment details are discussed during your free consultation call.</p>
+              <p className="faq-answer">After your consultation call you&apos;ll receive a Stripe invoice by email for a 50% deposit — plus any applicable mileage fee for locations outside Denver. The remaining 50% is invoiced upon delivery of your edited files. Stripe accepts all major credit and debit cards.</p>
             </details>
           </div>
         </div>

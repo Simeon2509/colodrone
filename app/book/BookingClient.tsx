@@ -265,7 +265,7 @@ export default function BookingClient() {
               </div>
               <div className="bk-confirm-step">
                 <div className="bk-confirm-step-num">2</div>
-                <div>A <strong>50% deposit</strong> (plus mileage if outside Denver) is due to lock in your shoot date.</div>
+                <div>You&apos;ll receive a <strong>Stripe invoice by email</strong> for a 50% deposit (plus mileage if outside Denver) to lock in your shoot date.</div>
               </div>
               <div className="bk-confirm-step">
                 <div className="bk-confirm-step-num">3</div>
@@ -479,7 +479,7 @@ export default function BookingClient() {
             <div className="bk-payment-note">
               <div className="bk-payment-title">How Payment Works</div>
               <div className="bk-payment-body">
-                A <strong>50% deposit</strong> is due to confirm your shoot date — plus any applicable mileage fee for locations outside Denver. The remaining <strong>50% is due upon delivery</strong> of your edited files.
+                After your consultation call, you&apos;ll receive a <strong>Stripe invoice by email</strong> for a 50% deposit — plus any applicable mileage fee for locations outside Denver. The remaining <strong>50% is invoiced upon delivery</strong> of your edited files. Stripe accepts all major credit and debit cards.
               </div>
             </div>
 
