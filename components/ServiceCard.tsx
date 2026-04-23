@@ -10,9 +10,11 @@ interface Props {
   tags: string[]
   href: string
   video: string
+  poster: string
+  from: string
 }
 
-export default function ServiceCard({ index, num, name, desc, tags, href, video }: Props) {
+export default function ServiceCard({ index, num, name, desc, tags, href, video, poster, from }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [hovered, setHovered] = useState(false)
 
@@ -41,15 +43,19 @@ export default function ServiceCard({ index, num, name, desc, tags, href, video 
           <div className="service-tags">
             {tags.map(t => <span key={t} className="tag">{t}</span>)}
           </div>
+          <div className="svc-from">From {from}</div>
         </div>
         <div className="svc-vid-wrap">
+          <img src={poster} alt={name} className="svc-vid svc-poster" />
           <video
             ref={videoRef}
             src={video}
+            poster={poster}
             muted
             loop
             playsInline
-            className="svc-vid"
+            preload="none"
+            className="svc-vid svc-video"
           />
         </div>
       </div>

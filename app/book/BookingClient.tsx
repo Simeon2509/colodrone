@@ -287,6 +287,12 @@ export default function BookingClient() {
           <p className="bk-page-sub">
             10 minute phone call — no obligation — we&apos;ll call you at your chosen time
           </p>
+          <div className="bk-trust-bar">
+            <div className="bk-trust-item"><span className="bk-trust-dot" />FAA Part 107 Certified</div>
+            <div className="bk-trust-item"><span className="bk-trust-dot" />Fully Insured</div>
+            <div className="bk-trust-item"><span className="bk-trust-dot" />Denver Based</div>
+            <div className="bk-trust-item"><span className="bk-trust-dot" />24hr Quote Turnaround</div>
+          </div>
           {badgeText ? (
             <div className="bk-badge">{badgeText}</div>
           ) : (

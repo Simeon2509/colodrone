@@ -45,23 +45,23 @@ export default function Home() {
           <p className="section-body">Aerial photography and videography for every need across Colorado. Click any service to see packages and pricing.</p>
         </div>
 
-        <ServiceCard index={0} num="01" name="Real Estate" href="/real-estate" video="/re_bg.mp4"
+        <ServiceCard index={0} num="01" name="Real Estate" href="/real-estate" video="/re_bg.mp4" poster="/images/real-estate/p1.jpg" from="$199"
           desc="Stunning aerial content that sells and rents faster. Exterior walkarounds, neighborhood context, lot overviews and twilight shots — for every listing across Colorado."
           tags={['For Sale','For Rent','Apartments','Mountain Estates','4K Video']} />
 
-        <ServiceCard index={1} num="02" name="Weddings & Events" href="/weddings" video="/weddings_bg.mp4"
+        <ServiceCard index={1} num="02" name="Weddings & Events" href="/weddings" video="/weddings_bg.mp4" poster="/images/weddings/p1.jpg" from="$349"
           desc="Cinematic aerial coverage of your most important moments. Mountain ceremonies, Denver venues, outdoor festivals and corporate events across the Front Range."
           tags={['Mountain Venues','Front Range','Cinematic','Corporate']} />
 
-        <ServiceCard index={2} num="03" name="Construction & Inspection" href="/construction" video="/construction_bg.mp4"
+        <ServiceCard index={2} num="03" name="Construction & Inspection" href="/construction" video="/construction_bg.mp4" poster="/images/construction/p1.jpg" from="$299"
           desc="Aerial documentation from groundbreaking to ribbon-cutting, and high-resolution inspection reports accepted by major insurance adjusters."
           tags={['Time-lapse','Monthly Plans','Insurance','Hi-Res Reports']} />
 
-        <ServiceCard index={3} num="04" name="Airbnb & Short-Term Rentals" href="/airbnb" video="/airbnb_bg.mp4"
+        <ServiceCard index={3} num="04" name="Airbnb & Short-Term Rentals" href="/airbnb" video="/airbnb_bg.mp4" poster="/images/airbnb/p1.jpg" from="$249"
           desc="Listings with aerial photos get more clicks, more bookings and higher nightly rates. Make your Denver or Colorado rental impossible to scroll past."
           tags={['Airbnb','VRBO','Denver Rentals','Vertical Reels']} />
 
-        <ServiceCard index={4} num="05" name="Venues, Hotels & Golf Courses" href="/venues" video="/venues_bg.mp4"
+        <ServiceCard index={4} num="05" name="Venues, Hotels & Golf Courses" href="/venues" video="/venues_bg.mp4" poster="/images/venues/p1.jpg" from="$499"
           desc="Give future guests a stunning first impression. Aerial content that showcases your full property, grounds and Colorado location like nothing else can."
           tags={['Event Venues','Hotels','Resorts','Golf Courses','4K HDR']} />
 
@@ -431,7 +431,7 @@ export default function Home() {
                   <svg viewBox="0 0 24 24" width="16" height="16" stroke="var(--co-blue)" fill="none" strokeWidth="1.5">
                     <path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2" />
                   </svg>
-                  (303) 949-7775
+                  <a href="tel:+13039497775" style={{ color: 'inherit', textDecoration: 'none' }}>(303) 949-7775</a>
                 </div>
                 <div className="contact-detail">
                   <svg viewBox="0 0 24 24" width="16" height="16" stroke="var(--co-blue)" fill="none" strokeWidth="1.5">
