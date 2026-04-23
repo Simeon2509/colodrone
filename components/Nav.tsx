@@ -21,6 +21,7 @@ export default function Nav() {
         <Link href="/#services">Services</Link>
         <Link href="/#local">Why Local</Link>
         <Link href="/#coverage">Coverage</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="/#contact">Contact</Link>
       </div>
       <Link href="/book" className="nav-cta">Book a Flight</Link>
