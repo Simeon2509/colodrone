@@ -377,6 +377,14 @@ div.pkg-card>.pkg-body>.pkg-features{flex:1}
 .step-title{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:2px;margin-bottom:0.5rem;color:var(--text)}
 .step-body{font-size:0.82rem;color:var(--muted);line-height:1.6}
 
+/* TESTIMONIALS */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem}
+.testimonial-card{background:var(--white);border:1px solid var(--border2);border-radius:4px;padding:2rem;display:flex;flex-direction:column;gap:1.5rem}
+.testimonial-text{font-size:0.9rem;color:var(--muted);line-height:1.8;margin:0;font-style:italic}
+.testimonial-text::before{content:'\201C';font-size:2rem;color:var(--co-blue);line-height:0;vertical-align:-0.5rem;margin-right:2px}
+.testimonial-name{font-size:0.88rem;font-weight:500;color:var(--text)}
+.testimonial-role{font-size:0.78rem;color:var(--muted);margin-top:2px;letter-spacing:0.3px}
+
 /* COVERAGE */
 #coverage{background:var(--white)}
 .coverage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);margin-top:2rem}

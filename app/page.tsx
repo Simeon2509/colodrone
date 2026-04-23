@@ -180,6 +180,36 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="testimonials" style={{ background: 'var(--bg)' }}>
+        <div className="section-inner">
+          <div className="section-eyebrow"><div className="eyebrow-line"></div>What Clients Say</div>
+          <h2 className="section-title">Trusted Across Colorado</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <p className="testimonial-text">"ColoDrone made our listing stand out immediately. The aerial shots showed the full lot and neighborhood context in a way ground photos never could. We had multiple offers within a week."</p>
+              <div className="testimonial-author">
+                <div className="testimonial-name">Sarah M.</div>
+                <div className="testimonial-role">Real Estate Agent · Cherry Creek</div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p className="testimonial-text">"The wedding footage was absolutely breathtaking. Having aerial shots of our mountain ceremony in Breckenridge was something our guests still talk about. Completely worth it."</p>
+              <div className="testimonial-author">
+                <div className="testimonial-name">Jake & Lindsey T.</div>
+                <div className="testimonial-role">Wedding · Breckenridge, CO</div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p className="testimonial-text">"We use ColoDrone monthly to document our construction projects. The progress shots are incredibly useful for clients and the turnaround is always fast. Highly recommend."</p>
+              <div className="testimonial-author">
+                <div className="testimonial-name">Marcus R.</div>
+                <div className="testimonial-role">Project Manager · Denver Metro</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="coverage">
         <div className="section-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Where We Fly</div>
