@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Services — ColoDrone | Colorado Drone Photography & Videography',
@@ -54,7 +55,16 @@ export default function ServicesPage() {
     <>
       {/* Hero */}
       <section className="svc-hero">
-        <div className="svc-hero-inner">
+        <Image
+          src="/images/real-estate/p1.jpg"
+          alt="Aerial drone view of Colorado"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+          priority
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.55)', zIndex: 1 }} />
+        <div className="svc-hero-inner" style={{ position: 'relative', zIndex: 2 }}>
           <div className="section-eyebrow" style={{ justifyContent: 'center' }}>
             <div className="eyebrow-line" />
             What We Do
