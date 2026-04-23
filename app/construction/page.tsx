@@ -59,7 +59,8 @@ export default function ConstructionPage() {
         <div className="sp-inner">
           <div className="section-eyebrow"><div className="eyebrow-line"></div>Pricing</div>
           <h2 className="section-title">Construction &amp; Inspection Packages</h2>
-          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>Flat-rate packages for progress documentation and property inspections across Colorado.</p>
+          <p style={{ fontSize: '0.88rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '0.75rem', maxWidth: '520px' }}>Flat-rate packages for progress documentation and property inspections across Colorado.</p>
+          <p style={{ fontSize: '0.82rem', color: 'var(--muted)', lineHeight: 1.7, marginBottom: '2rem', maxWidth: '520px' }}>* Locations outside Denver may incur an additional travel fee depending on mileage.</p>
           <div className="pkg-grid">
             <div className="pkg-card">
               <div className="pkg-summary-info">
