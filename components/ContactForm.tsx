@@ -1,9 +1,10 @@
 'use client'
 import { useState } from 'react'
 
-const EMAILJS_SERVICE_ID     = 'service_rwnxrgo'
-const EMAILJS_TEMPLATE_OWNER = 'template_r2sdyda'
-const EMAILJS_PUBLIC_KEY     = 'lg5qtatFPjG13S6I5'
+const EMAILJS_SERVICE_ID      = 'service_rwnxrgo'
+const EMAILJS_TEMPLATE_CLIENT = 'template_enc9gbw'
+const EMAILJS_TEMPLATE_OWNER  = 'template_r2sdyda'
+const EMAILJS_PUBLIC_KEY      = 'lg5qtatFPjG13S6I5'
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -24,23 +25,39 @@ export default function ContactForm() {
     setSubmitting(true)
     setError('')
 
+    const service = form.service || 'Not specified'
+    const messageBody = [
+      form.location ? `Location: ${form.location}` : '',
+      form.message  || 'No additional details',
+    ].filter(Boolean).join('\n')
+
     try {
       const ejs = await import('@emailjs/browser')
       ejs.init(EMAILJS_PUBLIC_KEY)
 
-      await ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
-        client_name:  `${form.firstName} ${form.lastName}`,
-        client_email: form.email,
-        to_email:     'hello@colodrone.com',
-        service:      form.service  || 'Not specified',
-        phone:        form.phone    || 'Not provided',
-        message:      [
-          form.location ? `Location: ${form.location}` : '',
-          form.message  || 'No additional details',
-        ].filter(Boolean).join('\n'),
-        date: '',
-        time: '',
-      })
+      const common = {
+        service:  service,
+        date:     'Contact form inquiry',
+        time:     'N/A',
+        phone:    form.phone || 'Not provided',
+        message:  messageBody,
+      }
+
+      await Promise.all([
+        // Confirmation email to the person who submitted
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLIENT, {
+          ...common,
+          to_name:  form.firstName,
+          to_email: form.email,
+        }),
+        // Notification email to you
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
+          ...common,
+          client_name:  `${form.firstName} ${form.lastName}`,
+          client_email: form.email,
+          to_email:     'hello@colodrone.com',
+        }),
+      ])
 
       setSubmitted(true)
     } catch (err) {
