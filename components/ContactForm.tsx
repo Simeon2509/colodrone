@@ -1,10 +1,9 @@
 'use client'
 import { useState } from 'react'
 
-const EMAILJS_SERVICE_ID      = 'service_rwnxrgo'
-const EMAILJS_TEMPLATE_CLIENT = 'template_enc9gbw'
-const EMAILJS_TEMPLATE_OWNER  = 'template_r2sdyda'
-const EMAILJS_PUBLIC_KEY      = 'lg5qtatFPjG13S6I5'
+const EMAILJS_SERVICE_ID       = 'service_rwnxrgo'
+const EMAILJS_TEMPLATE_CONTACT = 'template_r2sdyda'
+const EMAILJS_PUBLIC_KEY       = 'lg5qtatFPjG13S6I5'
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -43,19 +42,23 @@ export default function ContactForm() {
         message:  messageBody,
       }
 
+      const shared = {
+        ...common,
+        to_name:      form.firstName,
+        client_name:  `${form.firstName} ${form.lastName}`,
+        client_email: form.email,
+      }
+
       await Promise.all([
-        // Confirmation email to the person who submitted
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLIENT, {
-          ...common,
-          to_name:  form.firstName,
+        // Confirmation to the client
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT, {
+          ...shared,
           to_email: form.email,
         }),
-        // Notification email to you
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
-          ...common,
-          client_name:  `${form.firstName} ${form.lastName}`,
-          client_email: form.email,
-          to_email:     'hello@colodrone.com',
+        // Notification to you
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT, {
+          ...shared,
+          to_email: 'hello@colodrone.com',
         }),
       ])
 

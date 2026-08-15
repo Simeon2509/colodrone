@@ -2,8 +2,7 @@
 
 // ── EMAILJS CREDENTIALS ───────────────────────────────────────────────
 const EMAILJS_SERVICE_ID      = 'service_rwnxrgo'
-const EMAILJS_TEMPLATE_CLIENT = 'template_enc9gbw'
-const EMAILJS_TEMPLATE_OWNER  = 'template_r2sdyda'
+const EMAILJS_TEMPLATE_BOOKING = 'template_enc9gbw'
 const EMAILJS_PUBLIC_KEY      = 'lg5qtatFPjG13S6I5'
 // ─────────────────────────────────────────────────────────────────────
 
@@ -215,17 +214,23 @@ export default function BookingClient() {
         message: form.message || 'No additional notes',
       }
 
+      const shared = {
+        ...common,
+        to_name:      form.firstName,
+        client_name:  `${form.firstName} ${form.lastName}`,
+        client_email: form.email,
+      }
+
       await Promise.all([
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLIENT, {
-          ...common,
-          to_name:  form.firstName,
+        // Confirmation to the client
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_BOOKING, {
+          ...shared,
           to_email: form.email,
         }),
-        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_OWNER, {
-          ...common,
-          client_name:  `${form.firstName} ${form.lastName}`,
-          client_email: form.email,
-          to_email:     'hello@colodrone.com',
+        // Notification to you
+        ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_BOOKING, {
+          ...shared,
+          to_email: 'hello@colodrone.com',
         }),
       ])
 
