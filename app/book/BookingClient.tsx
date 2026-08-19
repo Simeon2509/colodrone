@@ -230,7 +230,7 @@ export default function BookingClient() {
         // Notification to you
         ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_BOOKING, {
           ...shared,
-          to_email: 'hello@colodrone.com',
+          to_email: 'colodroneshop@gmail.com',
         }),
       ])
 
@@ -239,7 +239,7 @@ export default function BookingClient() {
       setSubmitted(true)
     } catch (err) {
       console.error('EmailJS error:', err)
-      setSubmitErr('Something went wrong. Please email us directly at hello@colodrone.com or call (303) 949-7775 and we will get you booked.')
+      setSubmitErr('Something went wrong. Please email us directly at colodroneshop@gmail.com or call (303) 949-7775 and we will get you booked.')
     } finally {
       setSubmitting(false)
     }

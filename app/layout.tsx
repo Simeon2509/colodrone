@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               image: 'https://colodrone.com/images/real-estate/p1.jpg',
               logo: 'https://colodrone.com/logo.png',
               telephone: '+13039497775',
-              email: 'hello@colodrone.com',
+              email: 'colodroneshop@gmail.com',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Denver',
