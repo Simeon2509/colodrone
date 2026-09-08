@@ -19,3 +19,12 @@ Both templates send to `{{to_email}}` twice per submission: once to the client, 
 ## Known gaps
 - Service pages reference gallery images under `/images/` that don't exist yet.
 - Blog post detail pages may be incomplete.
+
+## Hosting & DNS
+Deployed on Simeon's personal Vercel account. Domain DNS is on Simeon's personal Porkbun account (porkbun.com).
+
+## Workflow
+Once a change is built and verified (`npm run build`), commit and push without stopping to ask for confirmation.
+
+## Sibling sites
+This is one of four marketing sites Simeon runs the same way: denverwebcrew.com, sillygoosepottery.com, and piratetaylorsmarine.com. They share the general Next.js/Vercel/Porkbun setup, but **each site's contact-form backend is different** (this one uses EmailJS; others use Resend or Formspree — check that site's own `CLAUDE.md`, don't assume). Pirate Taylor's Marine is also on fully separate GitHub/Vercel/Porkbun accounts, not Simeon's personal ones.
