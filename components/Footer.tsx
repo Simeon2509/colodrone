@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className="footer-col">
               <div className="footer-col-title">Contact</div>
-              <a href="mailto:hello@colodrone.com">hello@colodrone.com</a>
+              <a href="mailto:colodroneshop@gmail.com">colodroneshop@gmail.com</a>
               <a href="tel:3039497775">(303) 949-7775</a>
               <Link href="/#contact">Book a Flight</Link>
               <Link href="/#contact">Get a Quote</Link>

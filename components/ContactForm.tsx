@@ -58,14 +58,14 @@ export default function ContactForm() {
         // Notification to you
         ejs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT, {
           ...shared,
-          to_email: 'hello@colodrone.com',
+          to_email: 'colodroneshop@gmail.com',
         }),
       ])
 
       setSubmitted(true)
     } catch (err) {
       console.error('EmailJS error:', err)
-      setError('Something went wrong. Please email us directly at hello@colodrone.com or call (303) 949-7775.')
+      setError('Something went wrong. Please email us directly at colodroneshop@gmail.com or call (303) 949-7775.')
     } finally {
       setSubmitting(false)
     }
@@ -132,7 +132,7 @@ export default function ContactForm() {
           ? 'Message Sent! We will be in touch within 24 hours.'
           : submitting
           ? 'Sending…'
-          : 'Send Request — hello@colodrone.com'}
+          : 'Send Request — colodroneshop@gmail.com'}
       </button>
     </form>
   )
